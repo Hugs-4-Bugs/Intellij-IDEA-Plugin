@@ -1,5 +1,3 @@
-# **README.md — PrabhatAI IntelliJ Plugin**
-
 # 🚀 **PrabhatAI – AI Coding Assistant for IntelliJ IDEA**
 
 PrabhatAI is a powerful JetBrains IntelliJ plugin that integrates multiple AI models (OpenAI, Gemini, Claude, Mock), understands your **current file**, **project structure**, and **context**, and delivers accurate, project-specific suggestions inside the IDE.
@@ -382,6 +380,378 @@ Enable Mock provider to avoid total failure.
 
 ---
 
+
+# ✅ **PrabhatAI Plugin — Architecture Diagram (Mermaid)**
+
+```mermaid
+flowchart TD
+
+%% ========== UI LAYER ==========
+UserInput["User Types Message\n(PrabhatAIChatPanel)"]
+ChatPanel["Chat Panel UI\nPrabhatAIChatPanel"]
+Markdown["MarkdownRenderer\n ↳ HTML + Code Blocks + Copy Buttons"]
+DiffPanel["DiffPreviewPanel\n(Patch Viewer)"]
+
+%% ========== SERVICE FACADE ==========
+Facade["AiFacadeService\n(Entry Point for all Requests)"]
+
+%% ========== CONTEXT SYSTEM ==========
+ContextExtract["Context Extractors\n(ProjectContextExtractor, ActiveFileContextExtractor)"]
+PromptReq["PromptRequest\n(Final structured prompt)"]
+
+%% ========== PROVIDER MANAGER ==========
+ProviderManager["ProviderManager\n → Provider fallback\n → QuotaGuard"]
+QuotaGuard["QuotaGuard\n(Gemini 429 Detection\nCooldown Management)"]
+
+%% ========== AI PROVIDERS ==========
+subgraph AI Providers
+OpenAI["OpenAIAdapter"]
+Gemini["GeminiAdapter"]
+Claude["ClaudeAdapter"]
+Mock["MockAIProvider"]
+end
+
+%% ========== RESPONSES ==========
+AIResponse["AiResponse\n(explanation + patches)"]
+PatchModel["PatchModel / MultiFilePatchModel"]
+
+%% ========== WORKFLOW ==========
+
+UserInput --> ChatPanel
+ChatPanel --> Facade
+Facade --> ContextExtract
+ContextExtract --> PromptReq
+PromptReq --> ProviderManager
+
+ProviderManager -->|Primary| Gemini
+ProviderManager -->|Fallback 2| OpenAI
+ProviderManager -->|Fallback 3| Claude
+ProviderManager -->|Fallback 4| Mock
+
+Gemini -->|429 Quota Error| QuotaGuard --> ProviderManager
+Gemini --> AIResponse
+OpenAI --> AIResponse
+Claude --> AIResponse
+Mock --> AIResponse
+
+AIResponse --> ChatPanel
+AIResponse --> Markdown
+Markdown --> ChatPanel
+
+AIResponse --> PatchModel --> DiffPanel
+```
+
+---
+
+# ✅ **ASCII Architecture Diagram (Good for Documentation inside IntelliJ)**
+
+```
+┌──────────────────────┐        ┌────────────────────────┐
+│  User (Chat Panel)   │ -----> │ PrabhatAIChatPanel UI  │
+└──────────────────────┘        └───────────┬────────────┘
+                                             |
+                                             v
+                                 ┌────────────────────────┐
+                                 │    AiFacadeService     │
+                                 │  (requestCompletion)   │
+                                 └───────────┬────────────┘
+                                             |
+                 Extracts Project Context    |
+                ┌────────────────────────────┘
+                v
+     ┌──────────────────────────────┐
+     │  Context Extractors          │
+     │  - ProjectContextExtractor   │
+     │  - ActiveFileContextExtractor│
+     └───────────────┬──────────────┘
+                     |
+                     v
+      ┌────────────────────────────┐
+      │   PromptRequest Builder    │
+      └──────────────┬────────────┘
+                     |
+                     v
+      ┌────────────────────────────┐
+      │     ProviderManager        │
+      │  - tries providers         │
+      │  - handles failures        │
+      │  - uses QuotaGuard         │
+      └──────┬──────┬──────┬──────┘
+             |      |      |
+   ┌─────────v──┐ ┌─v──────────┐ ┌─────────v───┐ ┌───────────v──────┐
+   │ Gemini      │ │ OpenAI     │ │ Claude      │ │ Mock Provider     │
+   │ Adapter     │ │ Adapter    │ │ Adapter     │ │ (fallback)        │
+   └──────┬──────┘ └─────┬───────┘ └──────┬──────┘ └──────────┬──────┘
+          |              |               |                     |
+          | Success      | Success       | Success             | Success
+          v              v               v                     v
+                     ┌───────────────────────────┐
+                     │        AiResponse          │
+                     │ explanation + patch model  │
+                     └─────────────┬─────────────┘
+                                   |
+                   ┌───────────────┴────────────────┐
+                   v                                v
+    ┌───────────────────────────┐       ┌────────────────────────────┐
+    │ MarkdownRenderer (HTML)   │       │ PatchPreviewPanel (Diff)    │
+    └───────────────────────────┘       └────────────────────────────┘
+
+```
+
+---
+
+## ✅ **Conceptual System Overview**
+
+### **1. UI Layer**
+
+* PrabhatAIChatPanel
+* DiffPreviewPanel
+* MarkdownRenderer
+
+### **2. Service Layer**
+
+* AiFacadeService
+
+  * Builds final context-aware prompt
+  * Sends request to ProviderManager
+
+### **3. Context Extraction**
+
+* Reads:
+
+  * Active file
+  * Project structure
+
+### **4. Provider Manager + QuotaGuard**
+
+* Tries providers in given order
+* Detects Gemini quota issues
+* Automatically switches provider
+
+### **5. Providers**
+
+* GeminiAdapter
+* OpenAIAdapter
+* ClaudeAdapter
+* MockAIProvider
+
+### **6. Response Handling**
+
+* Shows AI result
+* Displays patches with built-in diff viewer
+
+  
+
+---
+
+# ✅ **UML CLASS DIAGRAM (Mermaid)**
+
+Paste directly into README:
+
+```mermaid
+classDiagram
+    %% ==============================
+    %% UI LAYER
+    %% ==============================
+
+    class PrabhatAIChatPanel {
+        - Project project
+        - JEditorPane chatPane
+        - JTextArea inputArea
+        - StringBuilder htmlMessages
+        + sendMessage()
+        + appendUserMessage()
+        + appendAIMessage()
+        + appendThinkingBubble()
+        + removeThinkingBubble()
+    }
+
+    class ChatPanel {
+    }
+
+    class DiffPreviewPanel {
+        + setPatchModel()
+        + setMultiFilePatch()
+    }
+
+    class MarkdownRenderer {
+        + render(markdown): String
+    }
+
+    PrabhatAIChatPanel --> MarkdownRenderer
+    PrabhatAIChatPanel --> DiffPreviewPanel
+
+
+    %% ==============================
+    %% SERVICE FACADE
+    %% ==============================
+
+    class AiFacadeService {
+        - ProviderManager manager
+        + requestCompletion(prompt): CompletableFuture~AiResponse~
+        + getInstance(project): AiFacadeService
+    }
+
+    PrabhatAIChatPanel --> AiFacadeService
+
+
+    %% ==============================
+    %% CONTEXT SYSTEM
+    %% ==============================
+
+    class ProjectContextExtractor {
+        + extract(project): String
+    }
+
+    class ActiveFileContextExtractor {
+        + extract(project): String
+    }
+
+    class PromptRequest {
+        - String prompt
+        - String context
+        + getPrompt()
+        + getContext()
+        + setPrompt()
+        + setContext()
+    }
+
+    AiFacadeService --> PromptRequest
+    ProviderManager --> ProjectContextExtractor
+    ProviderManager --> ActiveFileContextExtractor
+
+
+    %% ==============================
+    %% PROVIDER MANAGER
+    %% ==============================
+
+    class ProviderManager {
+        - List~AIProvider~ providers
+        - Project project
+        + complete(request): CompletableFuture~AiResponse~
+        + tryProvider()
+        + buildFinalPrompt()
+    }
+
+    class QuotaGuard {
+        + isGeminiBlocked(): boolean
+        + updateLastFailure(): void
+    }
+
+    ProviderManager --> QuotaGuard
+
+
+    %% ==============================
+    %% AI PROVIDERS
+    %% ==============================
+
+    class AIProvider {
+        <<interface>>
+        + completeCode(PromptRequest): CompletableFuture~AiResponse~
+        + providerId(): String
+    }
+
+    class GeminiAdapter {
+        + setApiKey()
+        + providerId()
+        + completeCode()
+    }
+
+    class OpenAIAdapter {
+        + setApiKey()
+        + providerId()
+        + completeCode()
+    }
+
+    class ClaudeAdapter {
+        + setApiKey()
+        + providerId()
+        + completeCode()
+    }
+
+    class MockAIProvider {
+        + providerId()
+        + completeCode()
+    }
+
+    AIProvider <|.. GeminiAdapter
+    AIProvider <|.. OpenAIAdapter
+    AIProvider <|.. ClaudeAdapter
+    AIProvider <|.. MockAIProvider
+
+    ProviderManager --> AIProvider
+
+
+    %% ==============================
+    %% RESPONSE MODELS
+    %% ==============================
+
+    class AiResponse {
+        - String explanation
+        - PatchModel patchModel
+        - MultiFilePatchModel multiFilePatchModel
+        + getExplanation()
+        + getPatchModel()
+        + getMultiFilePatch()
+    }
+
+    class PatchModel {
+        + hasChanges(): boolean
+    }
+
+    class MultiFilePatchModel {
+        + hasChanges(): boolean
+    }
+
+    AiResponse --> PatchModel
+    AiResponse --> MultiFilePatchModel
+
+    PrabhatAIChatPanel --> AiResponse
+```
+
+---
+
+## ✅ This UML shows:
+
+### **UI Layer**
+
+* PrabhatAIChatPanel
+* MarkdownRenderer
+* DiffPreviewPanel
+
+### **Service Layer**
+
+* AiFacadeService
+* ProviderManager
+
+### **Context Layer**
+
+* ProjectContextExtractor
+* ActiveFileContextExtractor
+* PromptRequest
+
+### **AI Provider Set**
+
+* AIProvider (interface)
+* GeminiAdapter
+* OpenAIAdapter
+* ClaudeAdapter
+* MockAIProvider
+
+### **Response Layer**
+
+* AiResponse
+* Patch models
+
+### **Utility**
+
+* QuotaGuard
+
+Everything is properly connected with UML relationships.
+
+---
+
+
 # 🙌 **Contributing**
 
 Pull requests welcome.
@@ -400,4 +770,5 @@ You can contribute:
 # 🏁 **License**
 
 MIT License (recommend adding this).
+
 
