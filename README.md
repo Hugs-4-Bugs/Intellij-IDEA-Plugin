@@ -4,14 +4,23 @@ PrabhatAI is a powerful JetBrains IntelliJ plugin that integrates multiple AI mo
 
 Features include:
 ✔ AI Chat Panel (PrabhatAIChatPanel)
+
 ✔ Code diff patch preview + auto-apply
+
 ✔ Context-aware answers using project tree + active file
+
 ✔ File-aware prompts (ProviderManager)
+
 ✔ Multi-provider fallback logic (OpenAI → Gemini → Claude → Mock)
+
 ✔ Rate-limit protection with QuotaGuard
+
 ✔ Markdown → styled HTML renderer
+
 ✔ Copy-code buttons in chat
+
 ✔ Inline suggestions (experimental)
+
 ✔ Settings UI for API keys and provider ordering
 
 ---
@@ -770,5 +779,6 @@ You can contribute:
 # 🏁 **License**
 
 MIT License (recommend adding this).
+
 
 
