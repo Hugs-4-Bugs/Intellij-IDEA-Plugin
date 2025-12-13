@@ -758,6 +758,166 @@ classDiagram
 
 Everything is properly connected with UML relationships.
 
+
+---
+
+# ## **🔥 UML Sequence Diagram — Prompt → Provider → Response → Patch**
+
+```mermaid
+sequenceDiagram
+    participant User as User
+    participant ChatPanel as PrabhatAIChatPanel
+    participant Facade as AiFacadeService
+    participant Manager as ProviderManager
+    participant Provider as AIProvider (Gemini/OpenAI/Claude)
+    participant Diff as DiffPreviewPanel
+
+    User ->> ChatPanel: Enter Prompt
+    ChatPanel ->> Facade: requestCompletion(prompt)
+    Facade ->> Manager: complete(PromptRequest)
+    Manager ->> Manager: Inject Project Context\n(buildFinalPrompt)
+    Manager ->> Provider: completeCode(finalPrompt)
+
+    alt Provider success
+        Provider -->> Manager: AiResponse
+        Manager -->> Facade: AiResponse
+        Facade -->> ChatPanel: AiResponse
+        ChatPanel ->> Diff: setPatchModel() / setMultiFilePatch()
+    else Provider fails
+        Provider -->> Manager: Error
+        Manager ->> Manager: Try next provider
+    end
+
+    ChatPanel ->> User: Render Markdown + Code Blocks + UI
+```
+
+---
+
+# ## **🔥 UML Component Diagram — PrabhatAI Plugin**
+
+```mermaid
+flowchart TD
+
+    subgraph UI["UI Layer"]
+        ChatPanel["PrabhatAIChatPanel"]
+        MarkdownRenderer["MarkdownRenderer"]
+        DiffPanel["DiffPreviewPanel"]
+        InlineRenderer["InlineSuggestionRenderer"]
+    end
+
+    subgraph Services["Core Services"]
+        Facade["AiFacadeService"]
+        ContextExtractor["ContextExtractor"]
+        PatchApplier["PsiPatchApplier / MultiFilePatchApplier"]
+        PromptManager["PromptTemplateManager"]
+    end
+
+    subgraph Providers["AI Providers"]
+        ProviderManager["ProviderManager"]
+        Gemini["GeminiAdapter"]
+        OpenAI["OpenAIAdapter"]
+        Claude["ClaudeAdapter"]
+        Mock["MockAIProvider"]
+        Quota["QuotaGuard"]
+    end
+
+    subgraph Settings["Settings"]
+        SettingsState["PrabhatAISettingsState"]
+        SettingsUI["PrabhatAISettingsConfigurable"]
+    end
+
+    subgraph Platform["JetBrains Platform"]
+        ToolWindow["AiToolWindowFactory"]
+        PSI["IntelliJ PSI APIs"]
+        ProjectContext["ProjectContextExtractor"]
+        FileContext["ActiveFileContextExtractor"]
+    end
+
+    ChatPanel --> Facade
+    Facade --> ProviderManager
+    ProviderManager --> Gemini
+    ProviderManager --> OpenAI
+    ProviderManager --> Claude
+    ProviderManager --> Mock
+    ProviderManager --> Quota
+
+    Facade --> ContextExtractor
+    PatchApplier --> PSI
+    DiffPanel --> PSI
+
+    SettingsUI --> SettingsState
+    Providers --> SettingsState
+
+    ToolWindow --> ChatPanel
+```
+
+---
+
+# ## **🔥 JetBrains Plugin Architecture Diagram**
+
+```mermaid
+flowchart LR
+
+    subgraph JetBrains IDE
+        TW["Tool Window (AiToolWindowFactory)"]
+        Editor["Editor + PSI"]
+    end
+
+    TW --> ChatPanelUI["PrabhatAIChatPanel UI"]
+
+    subgraph PluginCore["Plugin Core"]
+        FacadeSvc["AiFacadeService"]
+        ProviderMgr["ProviderManager"]
+        CtxExt["Context Extractors\n(Project + Active File)"]
+        Patch["Patch System\n(PsiPatchApplier,\nMultiFilePatchApplier)"]
+        Markdown["MarkdownRenderer"]
+    end
+
+    subgraph Providers["AI Providers Layer"]
+        GAI["GeminiAdapter"]
+        OAI["OpenAIAdapter"]
+        CAI["ClaudeAdapter"]
+        MPI["MockAIProvider"]
+        QG["QuotaGuard"]
+    end
+
+    ChatPanelUI --> FacadeSvc
+    FacadeSvc --> ProviderMgr
+    ProviderMgr --> GAI
+    ProviderMgr --> OAI
+    ProviderMgr --> CAI
+    ProviderMgr --> MPI
+    ProviderMgr --> QG
+
+    FacadeSvc --> CtxExt
+    ChatPanelUI --> Markdown
+    Patch --> Editor
+```
+
+---
+
+# ## **🔥 High-Level System Context Diagram (C4 Model — Level 1)**
+
+```mermaid
+flowchart TB
+    User(["Developer User"])
+
+    IDE["JetBrains IDE\n(IntelliJ, WebStorm, PyCharm)"]
+
+    Plugin["PrabhatAI Plugin\n(Your Plugin)"]
+
+    Providers["External AI Providers\n(Gemini, OpenAI, Claude)"]
+
+    Files["Project Source Files"]
+    PSI["JetBrains PSI System"]
+
+    User --> IDE
+    IDE --> Plugin
+    Plugin --> Providers
+    Plugin --> PSI
+    PSI --> Files
+```
+
 ---
 
 
@@ -779,6 +939,7 @@ You can contribute:
 # 🏁 **License**
 
 MIT License (recommend adding this).
+
 
 
 
