@@ -1,0 +1,13 @@
+<options>
+  <configurable id="IntelliLang.Configuration" configurable_name="Language Injections">
+    <option name="245" hit="245 injections (607 of 609 places enabled)" />
+    <option name="607" hit="245 injections (607 of 609 places enabled)" />
+    <option name="609" hit="245 injections (607 of 609 places enabled)" />
+    <option name="enabled" hit="245 injections (607 of 609 places enabled)" />
+    <option name="injections" hit="245 injections (607 of 609 places enabled)" />
+    <option name="of" hit="245 injections (607 of 609 places enabled)" />
+    <option name="places" hit="245 injections (607 of 609 places enabled)" />
+    <option name="injections" hit="Language Injections" />
+    <option name="language" hit="Language Injections" />
+  </configurable>
+</options>

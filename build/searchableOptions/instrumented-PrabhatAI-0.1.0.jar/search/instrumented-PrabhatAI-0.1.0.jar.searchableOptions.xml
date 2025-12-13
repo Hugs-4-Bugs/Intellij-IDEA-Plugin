@@ -1,0 +1,38 @@
+<options>
+  <configurable id="preferences.keymap" configurable_name="Keymap">
+    <option name="ai-generated" path="ActionManager" hit="Apply AI-generated patch" />
+    <option name="apply" path="ActionManager" hit="Apply AI-generated patch" />
+    <option name="patch" path="ActionManager" hit="Apply AI-generated patch" />
+    <option name="apply" path="ActionManager" hit="Apply PrabhatAI Patch" />
+    <option name="patch" path="ActionManager" hit="Apply PrabhatAI Patch" />
+    <option name="prabhatai" path="ActionManager" hit="Apply PrabhatAI Patch" />
+    <option name="prabhatai" path="ActionManager" hit="Run PrabhatAI" />
+    <option name="run" path="ActionManager" hit="Run PrabhatAI" />
+    <option name="code" path="ActionManager" hit="Run PrabhatAI on selected code or text" />
+    <option name="on" path="ActionManager" hit="Run PrabhatAI on selected code or text" />
+    <option name="or" path="ActionManager" hit="Run PrabhatAI on selected code or text" />
+    <option name="prabhatai" path="ActionManager" hit="Run PrabhatAI on selected code or text" />
+    <option name="run" path="ActionManager" hit="Run PrabhatAI on selected code or text" />
+    <option name="selected" path="ActionManager" hit="Run PrabhatAI on selected code or text" />
+    <option name="text" path="ActionManager" hit="Run PrabhatAI on selected code or text" />
+  </configurable>
+  <configurable id="com.PrabhatDevLab.settings.PrabhatAISettingsConfigurable" configurable_name="PrabhatAI">
+    <option name="enable" hit="Enable Gemini" />
+    <option name="gemini" hit="Enable Gemini" />
+    <option name="enable" hit="Enable Mock Provider" />
+    <option name="mock" hit="Enable Mock Provider" />
+    <option name="provider" hit="Enable Mock Provider" />
+    <option name="enable" hit="Enable OpenAI" />
+    <option name="openai" hit="Enable OpenAI" />
+    <option name="api" hit="Gemini API Key:" />
+    <option name="gemini" hit="Gemini API Key:" />
+    <option name="key" hit="Gemini API Key:" />
+    <option name="key" hit="OpenAI Key:" />
+    <option name="openai" hit="OpenAI Key:" />
+    <option name="prabhatai" hit="PrabhatAI" />
+    <option name="comma" hit="Provider Order (comma separated):" />
+    <option name="order" hit="Provider Order (comma separated):" />
+    <option name="provider" hit="Provider Order (comma separated):" />
+    <option name="separated" hit="Provider Order (comma separated):" />
+  </configurable>
+</options>

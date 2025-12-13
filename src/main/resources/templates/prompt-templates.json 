@@ -1,0 +1,75 @@
+{
+  "importsToAdd": ["java.util.List"],
+  "methodReplacements": [
+    {
+      "methodName": "signup",
+      "newBody": "System.out.println(\"Google OAuth signup implemented\");"
+    }
+  ],
+  "newMethods": [
+    {
+      "methodCode": "public void authorizeGoogle() { /*...*/ }"
+    }
+  ]
+}
+{
+  "importsToAdd": ["java.util.List"],
+  "methodReplacements": [
+    {
+      "methodName": "signup",
+      "newBody": "System.out.println(\"Google OAuth signup implemented\");"
+    }
+  ],
+  "newMethods": [
+    {
+      "methodCode": "public void authorizeGoogle() { System.out.println(\"auth...\"); }"
+    }
+  ]
+}
+{
+  "importsToAdd":["com.google.auth.*"],
+  "methodReplacements":[
+    {"methodName":"signup", "newBody":"return googleService.signup(user);"}
+  ],
+  "newMethods":[
+    {"methodCode":"public void googleInit(){ System.out.println(\"init\"); }"}
+  ]
+}
+{
+  "changes": [
+    {
+      "type": "replace_method",
+      "class": "UserService",
+      "methodName": "signup",
+      "newBody": "..."
+    },
+    {
+      "type": "add_import",
+      "import": "java.util.Optional"
+    },
+    {
+      "type": "add_field",
+      "class": "UserService",
+      "fieldCode": "private final PasswordEncoder encoder;"
+    }
+  ]
+}
+
+{
+  "files": [
+     {
+        "path": "src/main/java/com/app/service/UserService.java",
+        "patch": {...}
+     },
+     {
+        "path": "src/main/java/com/app/controller/AuthController.java",
+        "patch": {...}
+     }
+  ]
+}
+{
+   "generateTest": true,
+   "package": "com.app.service",
+   "class": "UserService",
+   "methods": ["signup", "login"]
+}

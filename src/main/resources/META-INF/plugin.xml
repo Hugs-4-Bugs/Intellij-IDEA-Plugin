@@ -1,0 +1,61 @@
+<idea-plugin>
+    <id>com.prabhatdevlab.prabhatai</id>
+    <name>PrabhatAI</name>
+
+    <vendor email="support@prabhatdevlab.com">PrabhatDevLab</vendor>
+
+    <description>
+        PrabhatAI - AI-powered inline suggestions, refactoring, multi-file patches,
+        and natural-language code transformation for Java/Spring development inside IntelliJ IDEA.
+    </description>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.java</depends>
+
+    <!-- EVERYTHING goes in ONE extensions block -->
+    <extensions defaultExtensionNs="com.intellij">
+
+        <!-- Services -->
+        <applicationService
+                serviceImplementation="com.PrabhatDevLab.settings.PrabhatAISettingsState"/>
+        <projectService
+                serviceImplementation="com.PrabhatDevLab.services.AiFacadeService"/>
+
+        <!-- Editor events -->
+        <editorFactoryListener
+                implementation="com.PrabhatDevLab.listeners.PrabhatAIEditorListener"/>
+
+        <!-- Settings UI -->
+        <projectConfigurable
+                implementation="com.PrabhatDevLab.settings.PrabhatAISettingsConfigurable"
+                id="PrabhatAI.Settings"
+                displayName="PrabhatAI"/>
+
+        <!-- TOOL WINDOW (THIS MUST BE HERE ONLY) -->
+        <toolWindow
+                id="PrabhatAI"
+                anchor="right"
+                factoryClass="com.PrabhatDevLab.ui.AiToolWindowFactory"
+                canCloseContents="false"/>
+    </extensions>
+
+    <!-- Actions -->
+    <actions>
+        <action
+                id="PrabhatAI.ShowPanel"
+                class="com.PrabhatDevLab.actions.ShowAiPanelAction"
+                text="Run PrabhatAI"
+                description="Run PrabhatAI on selected code or instruction">
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+        </action>
+
+        <action
+                id="PrabhatAI.ApplyPatch"
+                class="com.PrabhatDevLab.actions.ApplyPatchAction"
+                text="Apply PrabhatAI Patch"
+                description="Apply AI-generated patch">
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+        </action>
+    </actions>
+
+</idea-plugin>

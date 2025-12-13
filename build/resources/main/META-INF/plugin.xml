@@ -1,0 +1,80 @@
+<!--<idea-plugin>-->
+<!--    <id>com.prabhatdevlab.prabhatai</id>-->
+<!--    <name>PrabhatAI</name>-->
+<!--    <vendor email="support@prabhatdevlab.com">PrabhatDevLab</vendor>-->
+<!--    <description>-->
+<!--        PrabhatAI - AI-powered inline suggestions, refactoring, multi-file patches,-->
+<!--        and natural-language code transformation for Java/Spring development inside IntelliJ IDEA.-->
+<!--    </description>-->
+<!--    <depends>com.intellij.modules.platform</depends>-->
+<!--    <depends>com.intellij.java</depends>-->
+<!--    &lt;!&ndash; EVERYTHING goes in ONE extensions block &ndash;&gt;-->
+<!--    <extensions defaultExtensionNs="com.intellij">-->
+<!--        &lt;!&ndash; Services &ndash;&gt;-->
+<!--        <applicationService-->
+<!--                serviceImplementation="com.PrabhatDevLab.settings.PrabhatAISettingsState"/>-->
+<!--        <projectService-->
+<!--                serviceImplementation="com.PrabhatDevLab.services.AiFacadeService"/>-->
+<!--        &lt;!&ndash; Editor events &ndash;&gt;-->
+<!--        <editorFactoryListener-->
+<!--                implementation="com.PrabhatDevLab.listeners.PrabhatAIEditorListener"/>-->
+<!--        &lt;!&ndash; Settings UI &ndash;&gt;-->
+<!--        <projectConfigurable-->
+<!--                implementation="com.PrabhatDevLab.settings.PrabhatAISettingsConfigurable"-->
+<!--                id="PrabhatAI.Settings"-->
+<!--                displayName="PrabhatAI"/>-->
+<!--        &lt;!&ndash; TOOL WINDOW (THIS MUST BE HERE ONLY) &ndash;&gt;-->
+<!--        <toolWindow-->
+<!--                id="PrabhatAI"-->
+<!--                anchor="right"-->
+<!--                factoryClass="com.PrabhatDevLab.ui.AiToolWindowFactory"-->
+<!--                canCloseContents="false"/>-->
+<!--    </extensions>-->
+<!--    &lt;!&ndash; Actions &ndash;&gt;-->
+<!--    <actions>-->
+<!--        <action-->
+<!--                id="PrabhatAI.ShowPanel"-->
+<!--                class="com.PrabhatDevLab.actions.ShowAiPanelAction"-->
+<!--                text="Run PrabhatAI"-->
+<!--                description="Run PrabhatAI on selected code or instruction">-->
+<!--            <add-to-group group-id="EditorPopupMenu" anchor="last"/>-->
+<!--        </action>-->
+<!--        <action-->
+<!--                id="PrabhatAI.ApplyPatch"-->
+<!--                class="com.PrabhatDevLab.actions.ApplyPatchAction"-->
+<!--                text="Apply PrabhatAI Patch"-->
+<!--                description="Apply AI-generated patch">-->
+<!--            <add-to-group group-id="EditorPopupMenu" anchor="last"/>-->
+<!--        </action>-->
+<!--    </actions>-->
+<!--</idea-plugin>-->
+<idea-plugin>
+  <idea-version since-build="232" until-build="999.*" />
+  <id>com.PrabhatDevLab.PrabhatAI</id>
+  <name>PrabhatAI</name>
+  <version>0.1.0</version>
+  <vendor email="support@prabhatdevlab.com">PrabhatDevLab</vendor>
+  <description>PrabhatAI - AI-powered inline suggestions, multi-provider AI chat,
+        refactoring and intelligent patch generation inside IntelliJ IDEA.</description>
+  <!-- Correct dependencies -->
+  <depends>com.intellij.modules.platform</depends>
+  <depends>com.intellij.java</depends>
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Application-level settings stored here -->
+    <applicationService serviceImplementation="com.PrabhatDevLab.settings.PrabhatAISettingsState" />
+    <!-- Project-level AI service -->
+    <projectService serviceImplementation="com.PrabhatDevLab.services.AiFacadeService" />
+    <!-- Settings Page (MUST use applicationConfigurable, NOT projectConfigurable) -->
+    <applicationConfigurable instance="com.PrabhatDevLab.settings.PrabhatAISettingsConfigurable" />
+    <!-- Tool Window -->
+    <toolWindow id="PrabhatAI" anchor="right" factoryClass="com.PrabhatDevLab.ui.PrabhatAIToolWindowFactory" canCloseContents="false" />
+  </extensions>
+  <actions>
+    <action id="PrabhatAI.ShowPanel" class="com.PrabhatDevLab.actions.ShowAiPanelAction" text="Run PrabhatAI" description="Run PrabhatAI on selected code or text">
+      <add-to-group group-id="EditorPopupMenu" anchor="last" />
+    </action>
+    <action id="PrabhatAI.ApplyPatch" class="com.PrabhatDevLab.actions.ApplyPatchAction" text="Apply PrabhatAI Patch" description="Apply AI-generated patch">
+      <add-to-group group-id="EditorPopupMenu" anchor="last" />
+    </action>
+  </actions>
+</idea-plugin>

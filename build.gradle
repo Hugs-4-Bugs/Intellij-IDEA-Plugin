@@ -1,0 +1,44 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.intellij' version '1.17.2'
+}
+
+group = 'com.PrabhatDevLab'
+version = '0.1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.squareup.okhttp3:okhttp:4.11.0'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+intellij {
+    version = '2023.2'
+    type = 'IU'       // MUST be Ultimate for EditorTextField
+    plugins = ['java']   // Correct plugin ID
+}
+
+patchPluginXml {
+    sinceBuild = '232'
+    untilBuild = '999.*'
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+runIde {
+    jvmArgs = ['-Xmx2g']
+}
+
+
+
+
