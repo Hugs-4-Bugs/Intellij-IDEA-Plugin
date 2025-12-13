@@ -42,12 +42,6 @@
   <configurable id="tasks" configurable_name="Tasks">
     <option name="" hit="       Update" />
     <option name="update" hit="       Update" />
-    <option name="always" hit="Always display task combo in toolbar" />
-    <option name="combo" hit="Always display task combo in toolbar" />
-    <option name="display" hit="Always display task combo in toolbar" />
-    <option name="in" hit="Always display task combo in toolbar" />
-    <option name="task" hit="Always display task combo in toolbar" />
-    <option name="toolbar" hit="Always display task combo in toolbar" />
     <option name="changelist" hit="Changelist name format:" />
     <option name="format" hit="Changelist name format:" />
     <option name="name" hit="Changelist name format:" />
@@ -69,6 +63,15 @@
     <option name="context" hit="Save context on commit" />
     <option name="on" hit="Save context on commit" />
     <option name="save" hit="Save context on commit" />
+    <option name="active" hit="Show task widget if there are no active tasks" />
+    <option name="are" hit="Show task widget if there are no active tasks" />
+    <option name="if" hit="Show task widget if there are no active tasks" />
+    <option name="no" hit="Show task widget if there are no active tasks" />
+    <option name="show" hit="Show task widget if there are no active tasks" />
+    <option name="task" hit="Show task widget if there are no active tasks" />
+    <option name="tasks" hit="Show task widget if there are no active tasks" />
+    <option name="there" hit="Show task widget if there are no active tasks" />
+    <option name="widget" hit="Show task widget if there are no active tasks" />
     <option name="history" hit="Task history length:" />
     <option name="length" hit="Task history length:" />
     <option name="task" hit="Task history length:" />

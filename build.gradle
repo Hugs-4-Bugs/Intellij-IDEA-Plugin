@@ -21,14 +21,18 @@ java {
 }
 
 intellij {
-    version = '2023.2'
-    type = 'IU'       // MUST be Ultimate for EditorTextField
-    plugins = ['java']   // Correct plugin ID
+    version = "IC-233.14808.21"
+    type = "IC"
+    plugins = [
+            "java",
+            "org.intellij.plugins.markdown"
+    ]
 }
 
+
 patchPluginXml {
-    sinceBuild = '232'
-    untilBuild = '999.*'
+    sinceBuild = "233"
+    untilBuild = "233.*"
 }
 
 tasks.withType(JavaCompile) {
@@ -38,7 +42,3 @@ tasks.withType(JavaCompile) {
 runIde {
     jvmArgs = ['-Xmx2g']
 }
-
-
-
-

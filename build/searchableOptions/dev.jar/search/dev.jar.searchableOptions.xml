@@ -154,6 +154,9 @@
     <option name="fus" path="ActionManager" hit="Show FUS Collectors Scheme" />
     <option name="scheme" path="ActionManager" hit="Show FUS Collectors Scheme" />
     <option name="show" path="ActionManager" hit="Show FUS Collectors Scheme" />
+    <option name="psi" path="ActionManager" hit="Show PSI Structure..." />
+    <option name="show" path="ActionManager" hit="Show PSI Structure..." />
+    <option name="structure" path="ActionManager" hit="Show PSI Structure..." />
     <option name="events" path="ActionManager" hit="Test Parsing Events Scheme..." />
     <option name="parsing" path="ActionManager" hit="Test Parsing Events Scheme..." />
     <option name="scheme" path="ActionManager" hit="Test Parsing Events Scheme..." />
@@ -174,6 +177,11 @@
     <option name="test" path="ActionManager" hit="Updates the main events scheme from the server if necessary. Also re-loads events test scheme from the file." />
     <option name="the" path="ActionManager" hit="Updates the main events scheme from the server if necessary. Also re-loads events test scheme from the file." />
     <option name="updates" path="ActionManager" hit="Updates the main events scheme from the server if necessary. Also re-loads events test scheme from the file." />
+    <option name="debugger" path="ActionManager" hit="Use Dialog For PSI Debugger" />
+    <option name="dialog" path="ActionManager" hit="Use Dialog For PSI Debugger" />
+    <option name="for" path="ActionManager" hit="Use Dialog For PSI Debugger" />
+    <option name="psi" path="ActionManager" hit="Use Dialog For PSI Debugger" />
+    <option name="use" path="ActionManager" hit="Use Dialog For PSI Debugger" />
     <option name="current" path="ActionManager" hit="View PSI Structure of Current File..." />
     <option name="file" path="ActionManager" hit="View PSI Structure of Current File..." />
     <option name="of" path="ActionManager" hit="View PSI Structure of Current File..." />

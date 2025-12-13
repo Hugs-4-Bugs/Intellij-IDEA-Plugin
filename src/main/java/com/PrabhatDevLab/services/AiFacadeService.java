@@ -1,75 +1,3 @@
-//package com.PrabhatDevLab.services;
-//
-//import com.PrabhatDevLab.services.ai.*;
-//import com.PrabhatDevLab.services.models.AiResponse;
-//import com.PrabhatDevLab.services.models.PromptRequest;
-//import com.PrabhatDevLab.settings.PrabhatAISettingsState;
-//
-//import com.intellij.openapi.project.Project;
-//import org.jetbrains.annotations.NotNull;
-//
-//import java.util.ArrayList;
-//import java.util.List;
-//import java.util.concurrent.CompletableFuture;
-//
-//public class AiFacadeService {
-//
-//    private final ProviderManager manager;
-//
-//    public AiFacadeService(@NotNull Project project) {
-//
-//        PrabhatAISettingsState st = PrabhatAISettingsState.getInstance();
-//        List<AIProvider> list = new ArrayList<>();
-//
-//        for (String id : st.providerOrder.split(",")) {
-//            id = id.trim();
-//
-//            switch (id) {
-//
-//                case "mock":
-//                    if (st.enableMock) list.add(new MockAIProvider());
-//                    break;
-//
-//                case "gemini":
-//                    if (st.enableGemini) {
-//                        GeminiAdapter g = new GeminiAdapter();
-//                        g.setApiKey(st.geminiKey);
-//                        list.add(g);
-//                    }
-//                    break;
-//
-//                case "openai":
-//                    if (st.enableOpenAI) {
-//                        OpenAIAdapter o = new OpenAIAdapter();
-//                        o.setApiKey(st.openAiKey);
-//                        list.add(o);
-//                    }
-//                    break;
-//            }
-//        }
-//
-//        if (list.isEmpty()) list.add(new MockAIProvider());
-//
-//        this.manager = new ProviderManager(list);
-//    }
-//
-//    public static AiFacadeService getInstance(Project project) {
-//        return project.getService(AiFacadeService.class);
-//    }
-//
-//    public CompletableFuture<AiResponse> requestCompletion(String input) {
-//        PromptRequest req = new PromptRequest();
-//        req.setPrompt(input);
-//        req.setContext("");
-//        return manager.complete(req);
-//    }
-//}
-
-
-
-
-
-
 package com.PrabhatDevLab.services;
 
 import com.PrabhatDevLab.services.ai.*;
@@ -122,7 +50,7 @@ public class AiFacadeService {
         if (list.isEmpty())
             list.add(new MockAIProvider());
 
-        this.manager = new ProviderManager(list);
+        this.manager = new ProviderManager(list, project);
     }
 
     public static AiFacadeService getInstance(Project project) {

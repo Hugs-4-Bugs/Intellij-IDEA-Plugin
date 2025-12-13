@@ -5,5 +5,5 @@ Version: 0.1.0
 Build-Plugin: Gradle IntelliJ Plugin
 Build-Plugin-Version: 1.17.2
 Build-OS: Mac OS X 14.8.1 x86_64
-Build-SDK: IU-2023.2
+Build-SDK: IC-233.14808.21
 

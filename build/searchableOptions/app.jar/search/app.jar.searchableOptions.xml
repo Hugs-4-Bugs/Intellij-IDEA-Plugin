@@ -1,8 +1,6 @@
 <options>
   <configurable id="preferences.keymap" configurable_name="Keymap">
     <option name="" path="ActionManager" hit="" />
-    <option name="actual" path="ActionManager" hit="Actual Size" />
-    <option name="size" path="ActionManager" hit="Actual Size" />
     <option name="add" path="ActionManager" hit="Add" />
     <option name="add" path="ActionManager" hit="Add to VCS" />
     <option name="to" path="ActionManager" hit="Add to VCS" />
@@ -23,9 +21,6 @@
     <option name="line" path="ActionManager" hit="Annotated Line Operations" />
     <option name="operations" path="ActionManager" hit="Annotated Line Operations" />
     <option name="apply" path="ActionManager" hit="Apply" />
-    <option name="apply" path="ActionManager" hit="Apply Current Layout" />
-    <option name="current" path="ActionManager" hit="Apply Current Layout" />
-    <option name="layout" path="ActionManager" hit="Apply Current Layout" />
     <option name="apply" path="ActionManager" hit="Apply Patch from Clipboard..." />
     <option name="clipboard" path="ActionManager" hit="Apply Patch from Clipboard..." />
     <option name="from" path="ActionManager" hit="Apply Patch from Clipboard..." />
@@ -52,20 +47,9 @@
     <option name="the" path="ActionManager" hit="Apply the reverse of the selected changes to the working copy" />
     <option name="to" path="ActionManager" hit="Apply the reverse of the selected changes to the working copy" />
     <option name="working" path="ActionManager" hit="Apply the reverse of the selected changes to the working copy" />
-    <option name="arc" path="ActionManager" hit="Arc" />
-    <option name="auto" path="ActionManager" hit="Auto Route Edges" />
-    <option name="edges" path="ActionManager" hit="Auto Route Edges" />
-    <option name="route" path="ActionManager" hit="Auto Route Edges" />
-    <option name="balloons" path="ActionManager" hit="Balloons" />
-    <option name="bezier" path="ActionManager" hit="Bezier" />
     <option name="bottom" path="ActionManager" hit="Bottom" />
     <option name="browse" path="ActionManager" hit="Browse Changes..." />
     <option name="changes" path="ActionManager" hit="Browse Changes..." />
-    <option name="by" path="ActionManager" hit="By Sources" />
-    <option name="sources" path="ActionManager" hit="By Sources" />
-    <option name="by" path="ActionManager" hit="By Targets" />
-    <option name="targets" path="ActionManager" hit="By Targets" />
-    <option name="center" path="ActionManager" hit="Center" />
     <option name="caret" path="ActionManager" hit="Change Under Caret" />
     <option name="change" path="ActionManager" hit="Change Under Caret" />
     <option name="under" path="ActionManager" hit="Change Under Caret" />
@@ -73,7 +57,6 @@
     <option name="criteria" path="ActionManager" hit="Change filtering criteria" />
     <option name="filtering" path="ActionManager" hit="Change filtering criteria" />
     <option name="changelists" path="ActionManager" hit="Changelists" />
-    <option name="channel" path="ActionManager" hit="Channel" />
     <option name="but" path="ActionManager" hit="Check Ignored but not Excluded Directories" />
     <option name="check" path="ActionManager" hit="Check Ignored but not Excluded Directories" />
     <option name="directories" path="ActionManager" hit="Check Ignored but not Excluded Directories" />
@@ -132,7 +115,6 @@
     <option name="changes" path="ActionManager" hit="Cherry-Pick Selected Changes" />
     <option name="cherry-pick" path="ActionManager" hit="Cherry-Pick Selected Changes" />
     <option name="selected" path="ActionManager" hit="Cherry-Pick Selected Changes" />
-    <option name="circular" path="ActionManager" hit="Circular" />
     <option name="clear" path="ActionManager" hit="Clear" />
     <option name="cached" path="ActionManager" hit="Clears cached revisions" />
     <option name="clears" path="ActionManager" hit="Clears cached revisions" />
@@ -165,7 +147,6 @@
     <option name="or" path="ActionManager" hit="Commit selected files or directories" />
     <option name="selected" path="ActionManager" hit="Commit selected files or directories" />
     <option name="commit" path="ActionManager" hit="Commit..." />
-    <option name="compact" path="ActionManager" hit="Compact" />
     <option name="compact" path="ActionManager" hit="Compact References View" />
     <option name="references" path="ActionManager" hit="Compact References View" />
     <option name="view" path="ActionManager" hit="Compact References View" />
@@ -338,8 +319,6 @@
     <option name="delete" path="ActionManager" hit="Delete" />
     <option name="changelist" path="ActionManager" hit="Delete Changelist" />
     <option name="delete" path="ActionManager" hit="Delete Changelist" />
-    <option name="delete" path="ActionManager" hit="Delete Selection" />
-    <option name="selection" path="ActionManager" hit="Delete Selection" />
     <option name="delete" path="ActionManager" hit="Delete selected shelf" />
     <option name="selected" path="ActionManager" hit="Delete selected shelf" />
     <option name="shelf" path="ActionManager" hit="Delete selected shelf" />
@@ -347,9 +326,6 @@
     <option name="location" path="ActionManager" hit="Diff Preview Location" />
     <option name="preview" path="ActionManager" hit="Diff Preview Location" />
     <option name="directory" path="ActionManager" hit="Directory" />
-    <option name="compactly" path="ActionManager" hit="Display Nodes Compactly" />
-    <option name="display" path="ActionManager" hit="Display Nodes Compactly" />
-    <option name="nodes" path="ActionManager" hit="Display Nodes Compactly" />
     <option name="changes" path="ActionManager" hit="Display changes to each merged commit separately" />
     <option name="commit" path="ActionManager" hit="Display changes to each merged commit separately" />
     <option name="display" path="ActionManager" hit="Display changes to each merged commit separately" />
@@ -360,18 +336,6 @@
     <option name="details" path="ActionManager" hit="Display details panel" />
     <option name="display" path="ActionManager" hit="Display details panel" />
     <option name="panel" path="ActionManager" hit="Display details panel" />
-    <option name="balloons" path="ActionManager" hit="Edge Bundled Balloons" />
-    <option name="bundled" path="ActionManager" hit="Edge Bundled Balloons" />
-    <option name="edge" path="ActionManager" hit="Edge Bundled Balloons" />
-    <option name="bundled" path="ActionManager" hit="Edge Bundled Circular" />
-    <option name="circular" path="ActionManager" hit="Edge Bundled Circular" />
-    <option name="edge" path="ActionManager" hit="Edge Bundled Circular" />
-    <option name="bundled" path="ActionManager" hit="Edge Bundled Organic" />
-    <option name="edge" path="ActionManager" hit="Edge Bundled Organic" />
-    <option name="organic" path="ActionManager" hit="Edge Bundled Organic" />
-    <option name="bundled" path="ActionManager" hit="Edge Bundled Radial" />
-    <option name="edge" path="ActionManager" hit="Edge Bundled Radial" />
-    <option name="radial" path="ActionManager" hit="Edge Bundled Radial" />
     <option name="edit" path="ActionManager" hit="Edit" />
     <option name="changelist" path="ActionManager" hit="Edit Changelist..." />
     <option name="edit" path="ActionManager" hit="Edit Changelist..." />
@@ -408,16 +372,9 @@
     <option name="branches" path="ActionManager" hit="Expand linear branches" />
     <option name="expand" path="ActionManager" hit="Expand linear branches" />
     <option name="linear" path="ActionManager" hit="Expand linear branches" />
-    <option name="family" path="ActionManager" hit="Family" />
     <option name="filter" path="ActionManager" hit="Filter" />
     <option name="by" path="ActionManager" hit="Filter By" />
     <option name="filter" path="ActionManager" hit="Filter By" />
-    <option name="content" path="ActionManager" hit="Fit Content" />
-    <option name="fit" path="ActionManager" hit="Fit Content" />
-    <option name="after" path="ActionManager" hit="Fit Content After Layout" />
-    <option name="content" path="ActionManager" hit="Fit Content After Layout" />
-    <option name="fit" path="ActionManager" hit="Fit Content After Layout" />
-    <option name="layout" path="ActionManager" hit="Fit Content After Layout" />
     <option name="filter" path="ActionManager" hit="Focus Text Filter" />
     <option name="focus" path="ActionManager" hit="Focus Text Filter" />
     <option name="text" path="ActionManager" hit="Focus Text Filter" />
@@ -445,7 +402,6 @@
     <option name="tag" path="ActionManager" hit="Generate a new XML tag according to schema information" />
     <option name="to" path="ActionManager" hit="Generate a new XML tag according to schema information" />
     <option name="xml" path="ActionManager" hit="Generate a new XML tag according to schema information" />
-    <option name="generic" path="ActionManager" hit="Generic" />
     <option name="get" path="ActionManager" hit="Get" />
     <option name="control" path="ActionManager" hit="Get from Version Control..." />
     <option name="from" path="ActionManager" hit="Get from Version Control..." />
@@ -498,14 +454,10 @@
     <option name="coverage" path="ActionManager" hit="Hide coverage data" />
     <option name="data" path="ActionManager" hit="Hide coverage data" />
     <option name="hide" path="ActionManager" hit="Hide coverage data" />
-    <option name="hierarchic" path="ActionManager" hit="Hierarchic" />
-    <option name="groups" path="ActionManager" hit="Hierarchic Groups" />
-    <option name="hierarchic" path="ActionManager" hit="Hierarchic Groups" />
     <option name="here" path="ActionManager" hit="History Up to Here" />
     <option name="history" path="ActionManager" hit="History Up to Here" />
     <option name="to" path="ActionManager" hit="History Up to Here" />
     <option name="up" path="ActionManager" hit="History Up to Here" />
-    <option name="horizontally" path="ActionManager" hit="Horizontally" />
     <option name="import" path="ActionManager" hit="Import Patches…" />
     <option name="patches" path="ActionManager" hit="Import Patches…" />
     <option name="as" path="ActionManager" hit="Indexing was paused as it took longer than expected. Resume." />
@@ -535,7 +487,6 @@
     <option name="invalidate" path="ActionManager" hit="Invalidate Vcs Log Caches and Indexes" />
     <option name="log" path="ActionManager" hit="Invalidate Vcs Log Caches and Indexes" />
     <option name="vcs" path="ActionManager" hit="Invalidate Vcs Log Caches and Indexes" />
-    <option name="left" path="ActionManager" hit="Left" />
     <option name="from" path="ActionManager" hit="Load Inspection Profile from YAML" />
     <option name="inspection" path="ActionManager" hit="Load Inspection Profile from YAML" />
     <option name="load" path="ActionManager" hit="Load Inspection Profile from YAML" />
@@ -555,13 +506,6 @@
     <option name="preview" path="ActionManager" hit="Locate Diff Preview in the right" />
     <option name="right" path="ActionManager" hit="Locate Diff Preview in the right" />
     <option name="the" path="ActionManager" hit="Locate Diff Preview in the right" />
-    <option name="duplicates" path="ActionManager" hit="Locate Duplicates..." />
-    <option name="locate" path="ActionManager" hit="Locate Duplicates..." />
-    <option name="code" path="ActionManager" hit="Locate duplicate code in project" />
-    <option name="duplicate" path="ActionManager" hit="Locate duplicate code in project" />
-    <option name="in" path="ActionManager" hit="Locate duplicate code in project" />
-    <option name="locate" path="ActionManager" hit="Locate duplicate code in project" />
-    <option name="project" path="ActionManager" hit="Locate duplicate code in project" />
     <option name="edges" path="ActionManager" hit="Long Edges" />
     <option name="long" path="ActionManager" hit="Long Edges" />
     <option name="dirty" path="ActionManager" hit="Mark File Dirty in VCS" />
@@ -571,7 +515,6 @@
     <option name="vcs" path="ActionManager" hit="Mark File Dirty in VCS" />
     <option name="case" path="ActionManager" hit="Match Case" />
     <option name="match" path="ActionManager" hit="Match Case" />
-    <option name="middle" path="ActionManager" hit="Middle" />
     <option name="branch" path="ActionManager" hit="Modify the latest commit of the current branch" />
     <option name="commit" path="ActionManager" hit="Modify the latest commit of the current branch" />
     <option name="current" path="ActionManager" hit="Modify the latest commit of the current branch" />
@@ -643,6 +586,13 @@
     <option name="open" path="ActionManager" hit="Open New Vcs Log Tab" />
     <option name="tab" path="ActionManager" hit="Open New Vcs Log Tab" />
     <option name="vcs" path="ActionManager" hit="Open New Vcs Log Tab" />
+    <option name="editor" path="ActionManager" hit="Open New Vcs Log Tab in Editor" />
+    <option name="in" path="ActionManager" hit="Open New Vcs Log Tab in Editor" />
+    <option name="log" path="ActionManager" hit="Open New Vcs Log Tab in Editor" />
+    <option name="new" path="ActionManager" hit="Open New Vcs Log Tab in Editor" />
+    <option name="open" path="ActionManager" hit="Open New Vcs Log Tab in Editor" />
+    <option name="tab" path="ActionManager" hit="Open New Vcs Log Tab in Editor" />
+    <option name="vcs" path="ActionManager" hit="Open New Vcs Log Tab in Editor" />
     <option name="open" path="ActionManager" hit="Open Repository Version" />
     <option name="repository" path="ActionManager" hit="Open Repository Version" />
     <option name="version" path="ActionManager" hit="Open Repository Version" />
@@ -660,9 +610,14 @@
     <option name="tab" path="ActionManager" hit="Open new tab with Vcs Log" />
     <option name="vcs" path="ActionManager" hit="Open new tab with Vcs Log" />
     <option name="with" path="ActionManager" hit="Open new tab with Vcs Log" />
-    <option name="organic" path="ActionManager" hit="Organic" />
-    <option name="groups" path="ActionManager" hit="Orthogonal Groups" />
-    <option name="orthogonal" path="ActionManager" hit="Orthogonal Groups" />
+    <option name="editor" path="ActionManager" hit="Open new tab with Vcs Log in editor" />
+    <option name="in" path="ActionManager" hit="Open new tab with Vcs Log in editor" />
+    <option name="log" path="ActionManager" hit="Open new tab with Vcs Log in editor" />
+    <option name="new" path="ActionManager" hit="Open new tab with Vcs Log in editor" />
+    <option name="open" path="ActionManager" hit="Open new tab with Vcs Log in editor" />
+    <option name="tab" path="ActionManager" hit="Open new tab with Vcs Log in editor" />
+    <option name="vcs" path="ActionManager" hit="Open new tab with Vcs Log in editor" />
+    <option name="with" path="ActionManager" hit="Open new tab with Vcs Log in editor" />
     <option name="pop" path="ActionManager" hit="Pop" />
     <option name="pop" path="ActionManager" hit="Pop selected shelf" />
     <option name="selected" path="ActionManager" hit="Pop selected shelf" />
@@ -683,10 +638,6 @@
     <option name="push" path="ActionManager" hit="Push..." />
     <option name="label" path="ActionManager" hit="Put Label..." />
     <option name="put" path="ActionManager" hit="Put Label..." />
-    <option name="curve" path="ActionManager" hit="Quad Curve" />
-    <option name="quad" path="ActionManager" hit="Quad Curve" />
-    <option name="radial" path="ActionManager" hit="Radial" />
-    <option name="random" path="ActionManager" hit="Random" />
     <option name="changes" path="ActionManager" hit="Recent Changes" />
     <option name="recent" path="ActionManager" hit="Recent Changes" />
     <option name="left" path="ActionManager" hit="References on the Left" />
@@ -759,9 +710,6 @@
     <option name="checks" path="ActionManager" hit="Run Commit Checks" />
     <option name="commit" path="ActionManager" hit="Run Commit Checks" />
     <option name="run" path="ActionManager" hit="Run Commit Checks" />
-    <option name="as" path="ActionManager" hit="Same as Main" />
-    <option name="main" path="ActionManager" hit="Same as Main" />
-    <option name="same" path="ActionManager" hit="Same as Main" />
     <option name="save" path="ActionManager" hit="Save To Shelf" />
     <option name="shelf" path="ActionManager" hit="Save To Shelf" />
     <option name="to" path="ActionManager" hit="Save To Shelf" />
@@ -809,14 +757,6 @@
     <option name="selected" path="ActionManager" hit="Selected commits are tracked by different vcses" />
     <option name="tracked" path="ActionManager" hit="Selected commits are tracked by different vcses" />
     <option name="vcses" path="ActionManager" hit="Selected commits are tracked by different vcses" />
-    <option name="left" path="ActionManager" hit="Send to Left" />
-    <option name="send" path="ActionManager" hit="Send to Left" />
-    <option name="to" path="ActionManager" hit="Send to Left" />
-    <option name="right" path="ActionManager" hit="Send to Right" />
-    <option name="send" path="ActionManager" hit="Send to Right" />
-    <option name="to" path="ActionManager" hit="Send to Right" />
-    <option name="parallel" path="ActionManager" hit="Series Parallel" />
-    <option name="series" path="ActionManager" hit="Series Parallel" />
     <option name="active" path="ActionManager" hit="Set Active Changelist" />
     <option name="changelist" path="ActionManager" hit="Set Active Changelist" />
     <option name="set" path="ActionManager" hit="Set Active Changelist" />
@@ -847,8 +787,6 @@
     <option name="all" path="ActionManager" hit="Show All Branches" />
     <option name="branches" path="ActionManager" hit="Show All Branches" />
     <option name="show" path="ActionManager" hit="Show All Branches" />
-    <option name="bridges" path="ActionManager" hit="Show Bridges" />
-    <option name="show" path="ActionManager" hit="Show Bridges" />
     <option name="changes" path="ActionManager" hit="Show Changes to Parents" />
     <option name="parents" path="ActionManager" hit="Show Changes to Parents" />
     <option name="show" path="ActionManager" hit="Show Changes to Parents" />
@@ -895,15 +833,10 @@
     <option name="double-click" path="ActionManager" hit="Show Diff on Double-Click" />
     <option name="on" path="ActionManager" hit="Show Diff on Double-Click" />
     <option name="show" path="ActionManager" hit="Show Diff on Double-Click" />
-    <option name="edge" path="ActionManager" hit="Show Edge Labels" />
-    <option name="labels" path="ActionManager" hit="Show Edge Labels" />
-    <option name="show" path="ActionManager" hit="Show Edge Labels" />
     <option name="at" path="ActionManager" hit="Show File at Revision" />
     <option name="file" path="ActionManager" hit="Show File at Revision" />
     <option name="revision" path="ActionManager" hit="Show File at Revision" />
     <option name="show" path="ActionManager" hit="Show File at Revision" />
-    <option name="grid" path="ActionManager" hit="Show Grid" />
-    <option name="show" path="ActionManager" hit="Show Grid" />
     <option name="history" path="ActionManager" hit="Show History" />
     <option name="show" path="ActionManager" hit="Show History" />
     <option name="for" path="ActionManager" hit="Show History for Selection…" />
@@ -935,12 +868,6 @@
     <option name="on" path="ActionManager" hit="Show Source on Double-Click" />
     <option name="show" path="ActionManager" hit="Show Source on Double-Click" />
     <option name="source" path="ActionManager" hit="Show Source on Double-Click" />
-    <option name="for" path="ActionManager" hit="Show Structure View for Selected Node" />
-    <option name="node" path="ActionManager" hit="Show Structure View for Selected Node" />
-    <option name="selected" path="ActionManager" hit="Show Structure View for Selected Node" />
-    <option name="show" path="ActionManager" hit="Show Structure View for Selected Node" />
-    <option name="structure" path="ActionManager" hit="Show Structure View for Selected Node" />
-    <option name="view" path="ActionManager" hit="Show Structure View for Selected Node" />
     <option name="in" path="ActionManager" hit="Show Tag Names in the Table" />
     <option name="names" path="ActionManager" hit="Show Tag Names in the Table" />
     <option name="show" path="ActionManager" hit="Show Tag Names in the Table" />
@@ -1036,20 +963,6 @@
     <option name="references" path="ActionManager" hit="Show references on the left of commit message" />
     <option name="show" path="ActionManager" hit="Show references on the left of commit message" />
     <option name="the" path="ActionManager" hit="Show references on the left of commit message" />
-    <option name="as" path="ActionManager" hit="Show selected item as left diff version" />
-    <option name="diff" path="ActionManager" hit="Show selected item as left diff version" />
-    <option name="item" path="ActionManager" hit="Show selected item as left diff version" />
-    <option name="left" path="ActionManager" hit="Show selected item as left diff version" />
-    <option name="selected" path="ActionManager" hit="Show selected item as left diff version" />
-    <option name="show" path="ActionManager" hit="Show selected item as left diff version" />
-    <option name="version" path="ActionManager" hit="Show selected item as left diff version" />
-    <option name="as" path="ActionManager" hit="Show selected item as right diff version" />
-    <option name="diff" path="ActionManager" hit="Show selected item as right diff version" />
-    <option name="item" path="ActionManager" hit="Show selected item as right diff version" />
-    <option name="right" path="ActionManager" hit="Show selected item as right diff version" />
-    <option name="selected" path="ActionManager" hit="Show selected item as right diff version" />
-    <option name="show" path="ActionManager" hit="Show selected item as right diff version" />
-    <option name="version" path="ActionManager" hit="Show selected item as right diff version" />
     <option name="also" path="ActionManager" hit="Show the latest modification date and author for each line (also known as &quot;Blame&quot;)" />
     <option name="and" path="ActionManager" hit="Show the latest modification date and author for each line (also known as &quot;Blame&quot;)" />
     <option name="as" path="ActionManager" hit="Show the latest modification date and author for each line (also known as &quot;Blame&quot;)" />
@@ -1087,13 +1000,6 @@
     <option name="hide" path="ActionManager" hit="Show/Hide already unshelved" />
     <option name="show" path="ActionManager" hit="Show/Hide already unshelved" />
     <option name="unshelved" path="ActionManager" hit="Show/Hide already unshelved" />
-    <option name="cycle" path="ActionManager" hit="Single Cycle" />
-    <option name="single" path="ActionManager" hit="Single Cycle" />
-    <option name="polyline" path="ActionManager" hit="Smoothed Polyline" />
-    <option name="smoothed" path="ActionManager" hit="Smoothed Polyline" />
-    <option name="grid" path="ActionManager" hit="Snap to Grid" />
-    <option name="snap" path="ActionManager" hit="Snap to Grid" />
-    <option name="to" path="ActionManager" hit="Snap to Grid" />
     <option name="a" path="ActionManager" hit="Specify hash or name of a branch or a tag to navigate to the commit it points" />
     <option name="branch" path="ActionManager" hit="Specify hash or name of a branch or a tag to navigate to the commit it points" />
     <option name="commit" path="ActionManager" hit="Specify hash or name of a branch or a tag to navigate to the commit it points" />
@@ -1108,9 +1014,6 @@
     <option name="tag" path="ActionManager" hit="Specify hash or name of a branch or a tag to navigate to the commit it points" />
     <option name="the" path="ActionManager" hit="Specify hash or name of a branch or a tag to navigate to the commit it points" />
     <option name="to" path="ActionManager" hit="Specify hash or name of a branch or a tag to navigate to the commit it points" />
-    <option name="spline" path="ActionManager" hit="Spline" />
-    <option name="polyline" path="ActionManager" hit="Straight Polyline" />
-    <option name="straight" path="ActionManager" hit="Straight Polyline" />
     <option name="replace" path="ActionManager" hit="Structural Replace" />
     <option name="structural" path="ActionManager" hit="Structural Replace" />
     <option name="search" path="ActionManager" hit="Structural Search" />
@@ -1142,7 +1045,6 @@
     <option name="commit" path="ActionManager" hit="Toggle Commit UI..." />
     <option name="toggle" path="ActionManager" hit="Toggle Commit UI..." />
     <option name="ui" path="ActionManager" hit="Toggle Commit UI..." />
-    <option name="top" path="ActionManager" hit="Top" />
     <option name="intellisort" path="ActionManager" hit="Turn IntelliSort On/Off" />
     <option name="off" path="ActionManager" hit="Turn IntelliSort On/Off" />
     <option name="on" path="ActionManager" hit="Turn IntelliSort On/Off" />
@@ -1206,7 +1108,6 @@
     <option name="control" path="ActionManager" hit="Version Control Group" />
     <option name="group" path="ActionManager" hit="Version Control Group" />
     <option name="version" path="ActionManager" hit="Version Control Group" />
-    <option name="vertically" path="ActionManager" hit="Vertically" />
     <option name="options" path="ActionManager" hit="View Options" />
     <option name="view" path="ActionManager" hit="View Options" />
     <option name="about" path="ActionManager" hit="View complete information about the selected changelist" />
@@ -1221,31 +1122,10 @@
     <option name="history" path="ActionManager" hit="View history of committed changes" />
     <option name="of" path="ActionManager" hit="View history of committed changes" />
     <option name="view" path="ActionManager" hit="View history of committed changes" />
-    <option name="wide" path="ActionManager" hit="Wide" />
     <option name="actions" path="ActionManager" hit="XML Actions" />
     <option name="xml" path="ActionManager" hit="XML Actions" />
     <option name="tag" path="ActionManager" hit="XML Tag..." />
     <option name="xml" path="ActionManager" hit="XML Tag..." />
-    <option name="in" path="ActionManager" hit="Zoom In" />
-    <option name="zoom" path="ActionManager" hit="Zoom In" />
-    <option name="out" path="ActionManager" hit="Zoom Out" />
-    <option name="zoom" path="ActionManager" hit="Zoom Out" />
-    <option name="" path="ActionManager" hit="🠈 Right to Left" />
-    <option name="left" path="ActionManager" hit="🠈 Right to Left" />
-    <option name="right" path="ActionManager" hit="🠈 Right to Left" />
-    <option name="to" path="ActionManager" hit="🠈 Right to Left" />
-    <option name="" path="ActionManager" hit="🠉 Bottom to Top" />
-    <option name="bottom" path="ActionManager" hit="🠉 Bottom to Top" />
-    <option name="to" path="ActionManager" hit="🠉 Bottom to Top" />
-    <option name="top" path="ActionManager" hit="🠉 Bottom to Top" />
-    <option name="" path="ActionManager" hit="🠊 Left to Right" />
-    <option name="left" path="ActionManager" hit="🠊 Left to Right" />
-    <option name="right" path="ActionManager" hit="🠊 Left to Right" />
-    <option name="to" path="ActionManager" hit="🠊 Left to Right" />
-    <option name="" path="ActionManager" hit="🠋 Top to Bottom" />
-    <option name="bottom" path="ActionManager" hit="🠋 Top to Bottom" />
-    <option name="to" path="ActionManager" hit="🠋 Top to Bottom" />
-    <option name="top" path="ActionManager" hit="🠋 Top to Bottom" />
   </configurable>
   <configurable id="editor.breadcrumbs" configurable_name="Breadcrumbs">
     <option name="xml" hit="XML" />
@@ -1443,27 +1323,27 @@
     <option name="gutter" hit="Editor Gutter//Whitespace-modified lines" />
     <option name="lines" hit="Editor Gutter//Whitespace-modified lines" />
     <option name="whitespace-modified" hit="Editor Gutter//Whitespace-modified lines" />
-    <option name="1" hit="VCS Annotations//Background color #1" />
+    <option name="#1" hit="VCS Annotations//Background color #1" />
     <option name="annotations" hit="VCS Annotations//Background color #1" />
     <option name="background" hit="VCS Annotations//Background color #1" />
     <option name="color" hit="VCS Annotations//Background color #1" />
     <option name="vcs" hit="VCS Annotations//Background color #1" />
-    <option name="2" hit="VCS Annotations//Background color #2" />
+    <option name="#2" hit="VCS Annotations//Background color #2" />
     <option name="annotations" hit="VCS Annotations//Background color #2" />
     <option name="background" hit="VCS Annotations//Background color #2" />
     <option name="color" hit="VCS Annotations//Background color #2" />
     <option name="vcs" hit="VCS Annotations//Background color #2" />
-    <option name="3" hit="VCS Annotations//Background color #3" />
+    <option name="#3" hit="VCS Annotations//Background color #3" />
     <option name="annotations" hit="VCS Annotations//Background color #3" />
     <option name="background" hit="VCS Annotations//Background color #3" />
     <option name="color" hit="VCS Annotations//Background color #3" />
     <option name="vcs" hit="VCS Annotations//Background color #3" />
-    <option name="4" hit="VCS Annotations//Background color #4" />
+    <option name="#4" hit="VCS Annotations//Background color #4" />
     <option name="annotations" hit="VCS Annotations//Background color #4" />
     <option name="background" hit="VCS Annotations//Background color #4" />
     <option name="color" hit="VCS Annotations//Background color #4" />
     <option name="vcs" hit="VCS Annotations//Background color #4" />
-    <option name="5" hit="VCS Annotations//Background color #5" />
+    <option name="#5" hit="VCS Annotations//Background color #5" />
     <option name="annotations" hit="VCS Annotations//Background color #5" />
     <option name="background" hit="VCS Annotations//Background color #5" />
     <option name="color" hit="VCS Annotations//Background color #5" />
@@ -1608,16 +1488,6 @@
     <option name="tag" hit="Tag Name" />
   </configurable>
   <configurable id="reference.idesettings.emmet" configurable_name="Emmet">
-    <option name="custom" hit="Custom..." />
-    <option name="emmet" hit="Emmet" />
-    <option name="enter" hit="Enter" />
-    <option name="abbreviation" hit="Expand abbreviation with" />
-    <option name="expand" hit="Expand abbreviation with" />
-    <option name="with" hit="Expand abbreviation with" />
-    <option name="space" hit="Space" />
-    <option name="tab" hit="Tab" />
-  </configurable>
-  <configurable id="reference.idesettings.emmet.xml" configurable_name="HTML">
     <option name="add" hit="Add edit point at the end of template" />
     <option name="at" hit="Add edit point at the end of template" />
     <option name="edit" hit="Add edit point at the end of template" />
@@ -1629,11 +1499,14 @@
     <option name="bem" hit="BEM" />
     <option name="comment" hit="Comment tags" />
     <option name="tags" hit="Comment tags" />
+    <option name="custom" hit="Custom..." />
     <option name="class" hit="Element separator in class names:" />
     <option name="element" hit="Element separator in class names:" />
     <option name="in" hit="Element separator in class names:" />
     <option name="names" hit="Element separator in class names:" />
     <option name="separator" hit="Element separator in class names:" />
+    <option name="emmet" hit="Emmet" />
+    <option name="" hit="Enable XML/HTML Emmet" />
     <option name="emmet" hit="Enable XML/HTML Emmet" />
     <option name="enable" hit="Enable XML/HTML Emmet" />
     <option name="html" hit="Enable XML/HTML Emmet" />
@@ -1650,12 +1523,15 @@
     <option name="while" hit="Enable automatic URL recognition while wrapping text with   tag" />
     <option name="with" hit="Enable automatic URL recognition while wrapping text with   tag" />
     <option name="wrapping" hit="Enable automatic URL recognition while wrapping text with   tag" />
+    <option name="enter" hit="Enter" />
     <option name="escape" hit="Escape" />
+    <option name="abbreviation" hit="Expand abbreviation with" />
+    <option name="expand" hit="Expand abbreviation with" />
+    <option name="with" hit="Expand abbreviation with" />
     <option name="by" hit="Filters enabled by default" />
     <option name="default" hit="Filters enabled by default" />
     <option name="enabled" hit="Filters enabled by default" />
     <option name="filters" hit="Filters enabled by default" />
-    <option name="html" hit="HTML" />
     <option name="class" hit="Modifier separator in class names:" />
     <option name="in" hit="Modifier separator in class names:" />
     <option name="modifier" hit="Modifier separator in class names:" />
@@ -1666,39 +1542,13 @@
     <option name="short" hit="Short element prefix:" />
     <option name="line" hit="Single line" />
     <option name="single" hit="Single line" />
+    <option name="space" hit="Space" />
+    <option name="tab" hit="Tab" />
     <option name="line" hit="Trim line markers" />
     <option name="markers" hit="Trim line markers" />
     <option name="trim" hit="Trim line markers" />
     <option name="tuning" hit="XSL tuning" />
     <option name="xsl" hit="XSL tuning" />
-  </configurable>
-  <configurable id="duplicates.index" configurable_name="Duplicates">
-    <option name="attribute" hit="Attribute values" />
-    <option name="values" hit="Attribute values" />
-    <option name="constant" hit="Constant values" />
-    <option name="values" hit="Constant values" />
-    <option name="detect" hit="Detect duplicates with different:" />
-    <option name="different" hit="Detect duplicates with different:" />
-    <option name="duplicates" hit="Detect duplicates with different:" />
-    <option name="with" hit="Detect duplicates with different:" />
-    <option name="duplicates" hit="Duplicates" />
-    <option name="field" hit="Function or field names" />
-    <option name="function" hit="Function or field names" />
-    <option name="names" hit="Function or field names" />
-    <option name="or" hit="Function or field names" />
-    <option name="names" hit="Property names" />
-    <option name="property" hit="Property names" />
-    <option name="property" hit="Property values" />
-    <option name="values" hit="Property values" />
-    <option name="attribute" hit="Tag or attribute names" />
-    <option name="names" hit="Tag or attribute names" />
-    <option name="or" hit="Tag or attribute names" />
-    <option name="tag" hit="Tag or attribute names" />
-    <option name="texts" hit="Texts" />
-    <option name="identifier" hit="Variable or identifier names" />
-    <option name="names" hit="Variable or identifier names" />
-    <option name="or" hit="Variable or identifier names" />
-    <option name="variable" hit="Variable or identifier names" />
   </configurable>
   <configurable id="coverage" configurable_name="Coverage">
     <option name="activate" hit="Activate Coverage View" />
@@ -1789,10 +1639,6 @@
     <option name="line" path="Code Generation" hit="Add a space at line comment start" />
     <option name="space" path="Code Generation" hit="Add a space at line comment start" />
     <option name="start" path="Code Generation" hit="Add a space at line comment start" />
-    <option name="add" path="Other" hit="Add for JSX attributes:" />
-    <option name="attributes" path="Other" hit="Add for JSX attributes:" />
-    <option name="for" path="Other" hit="Add for JSX attributes:" />
-    <option name="jsx" path="Other" hit="Add for JSX attributes:" />
     <option name="add" path="Code Generation" hit="Add spaces around block comments" />
     <option name="around" path="Code Generation" hit="Add spaces around block comments" />
     <option name="block" path="Code Generation" hit="Add spaces around block comments" />
@@ -1809,15 +1655,11 @@
     <option name="attribute" path="Other" hit="Around &quot;=&quot; in attribute" />
     <option name="in" path="Other" hit="Around &quot;=&quot; in attribute" />
     <option name="arrangement" path="Arrangement" hit="Arrangement" />
-    <option name="based" path="Other" hit="Based on type" />
-    <option name="on" path="Other" hit="Based on type" />
-    <option name="type" path="Other" hit="Based on type" />
     <option name="at" path="Code Generation" hit="Block comment at first column" />
     <option name="block" path="Code Generation" hit="Block comment at first column" />
     <option name="column" path="Code Generation" hit="Block comment at first column" />
     <option name="comment" path="Code Generation" hit="Block comment at first column" />
     <option name="first" path="Code Generation" hit="Block comment at first column" />
-    <option name="braces" path="Other" hit="Braces" />
     <option name="chop" path="Other" hit="Chop down if long" />
     <option name="down" path="Other" hit="Chop down if long" />
     <option name="if" path="Other" hit="Chop down if long" />
@@ -1915,7 +1757,6 @@
     <option name="no" path="Other" hit="No" />
     <option name="none" path="Other" hit="None" />
     <option name="other" path="Other" hit="Other" />
-    <option name="quotes" path="Other" hit="Quotes" />
     <option name="before" path="Other" hit="Remove new line before:" />
     <option name="line" path="Other" hit="Remove new line before:" />
     <option name="new" path="Other" hit="Remove new line before:" />
@@ -2314,9 +2155,6 @@
     <option name="align" path="Other" hit="Align attributes" />
     <option name="attributes" path="Other" hit="Align attributes" />
     <option name="always" path="Arrangement" hit="Always" />
-    <option name="android" path="Android" hit="Android" />
-    <option name="androidmanifest" path="Android" hit="AndroidManifest.xml" />
-    <option name="xml" path="Android" hit="AndroidManifest.xml" />
     <option name="around" path="Other" hit="Around &quot;=&quot; in attribute" />
     <option name="attribute" path="Other" hit="Around &quot;=&quot; in attribute" />
     <option name="in" path="Other" hit="Around &quot;=&quot; in attribute" />
@@ -2347,12 +2185,6 @@
     <option name="reformat" path="Code Generation" hit="Enforce on reformat" />
     <option name="force" path="Arrangement" hit="Force rearrange:" />
     <option name="rearrange" path="Arrangement" hit="Force rearrange:" />
-    <option name="group" path="Android" hit="Group tags with the same name" />
-    <option name="name" path="Android" hit="Group tags with the same name" />
-    <option name="same" path="Android" hit="Group tags with the same name" />
-    <option name="tags" path="Android" hit="Group tags with the same name" />
-    <option name="the" path="Android" hit="Group tags with the same name" />
-    <option name="with" path="Android" hit="Group tags with the same name" />
     <option name="grouping" path="Arrangement" hit="Grouping rules:" />
     <option name="rules" path="Arrangement" hit="Grouping rules:" />
     <option name="at" path="Other" hit="Hard wrap at:" />
@@ -2361,33 +2193,7 @@
     <option name="empty" path="Other" hit="In empty tag" />
     <option name="in" path="Other" hit="In empty tag" />
     <option name="tag" path="Other" hit="In empty tag" />
-    <option name="declarations" path="Android" hit="Include namespace declarations" />
-    <option name="include" path="Android" hit="Include namespace declarations" />
-    <option name="namespace" path="Android" hit="Include namespace declarations" />
     <option name="indent" path="Tabs and Indents" hit="Indent:" />
-    <option name="before" path="Android" hit="Insert blank line before tag" />
-    <option name="blank" path="Android" hit="Insert blank line before tag" />
-    <option name="insert" path="Android" hit="Insert blank line before tag" />
-    <option name="line" path="Android" hit="Insert blank line before tag" />
-    <option name="tag" path="Android" hit="Insert blank line before tag" />
-    <option name="after" path="Android" hit="Insert line break after last attribute" />
-    <option name="attribute" path="Android" hit="Insert line break after last attribute" />
-    <option name="break" path="Android" hit="Insert line break after last attribute" />
-    <option name="insert" path="Android" hit="Insert line break after last attribute" />
-    <option name="last" path="Android" hit="Insert line break after last attribute" />
-    <option name="line" path="Android" hit="Insert line break after last attribute" />
-    <option name="attribute" path="Android" hit="Insert line break before first attribute" />
-    <option name="before" path="Android" hit="Insert line break before first attribute" />
-    <option name="break" path="Android" hit="Insert line break before first attribute" />
-    <option name="first" path="Android" hit="Insert line break before first attribute" />
-    <option name="insert" path="Android" hit="Insert line break before first attribute" />
-    <option name="line" path="Android" hit="Insert line break before first attribute" />
-    <option name="around" path="Android" hit="Insert line breaks around style declaration" />
-    <option name="breaks" path="Android" hit="Insert line breaks around style declaration" />
-    <option name="declaration" path="Android" hit="Insert line breaks around style declaration" />
-    <option name="insert" path="Android" hit="Insert line breaks around style declaration" />
-    <option name="line" path="Android" hit="Insert line breaks around style declaration" />
-    <option name="style" path="Android" hit="Insert line breaks around style declaration" />
     <option name="blank" path="Other" hit="Keep blank lines:" />
     <option name="keep" path="Other" hit="Keep blank lines:" />
     <option name="lines" path="Other" hit="Keep blank lines:" />
@@ -2410,8 +2216,6 @@
     <option name="inside" path="Other" hit="Keep whitespace inside" />
     <option name="keep" path="Other" hit="Keep whitespace inside" />
     <option name="whitespace" path="Other" hit="Keep whitespace inside" />
-    <option name="files" path="Android" hit="Layout Files" />
-    <option name="layout" path="Android" hit="Layout Files" />
     <option name="at" path="Code Generation" hit="Line comment at first column" />
     <option name="column" path="Code Generation" hit="Line comment at first column" />
     <option name="comment" path="Code Generation" hit="Line comment at first column" />
@@ -2423,10 +2227,6 @@
     <option name="never" path="Arrangement" hit="Never" />
     <option name="no" path="Other" hit="No" />
     <option name="other" path="Other" hit="Other" />
-    <option name="files" path="Android" hit="Other XML resource files" />
-    <option name="other" path="Android" hit="Other XML resource files" />
-    <option name="resource" path="Android" hit="Other XML resource files" />
-    <option name="xml" path="Android" hit="Other XML resource files" />
     <option name="preserve" path="Other" hit="Preserve" />
     <option name="keep" path="Other" hit="Remove (keep with tags)" />
     <option name="remove" path="Other" hit="Remove (keep with tags)" />
@@ -2451,14 +2251,6 @@
     <option name="and" path="Tabs and Indents" hit="Tabs and Indents" />
     <option name="indents" path="Tabs and Indents" hit="Tabs and Indents" />
     <option name="tabs" path="Tabs and Indents" hit="Tabs and Indents" />
-    <option name="android" path="Android" hit="Use custom formatting settings for Android XML files" />
-    <option name="custom" path="Android" hit="Use custom formatting settings for Android XML files" />
-    <option name="files" path="Android" hit="Use custom formatting settings for Android XML files" />
-    <option name="for" path="Android" hit="Use custom formatting settings for Android XML files" />
-    <option name="formatting" path="Android" hit="Use custom formatting settings for Android XML files" />
-    <option name="settings" path="Android" hit="Use custom formatting settings for Android XML files" />
-    <option name="use" path="Android" hit="Use custom formatting settings for Android XML files" />
-    <option name="xml" path="Android" hit="Use custom formatting settings for Android XML files" />
     <option name="character" path="Tabs and Indents" hit="Use tab character" />
     <option name="tab" path="Tabs and Indents" hit="Use tab character" />
     <option name="use" path="Tabs and Indents" hit="Use tab character" />
@@ -2471,11 +2263,6 @@
     <option name="the" path="Arrangement" hit="Use the current mode (toggled in the Reformat Code dialog)" />
     <option name="toggled" path="Arrangement" hit="Use the current mode (toggled in the Reformat Code dialog)" />
     <option name="use" path="Arrangement" hit="Use the current mode (toggled in the Reformat Code dialog)" />
-    <option name="and" path="Android" hit="Value Resource Files and Selectors" />
-    <option name="files" path="Android" hit="Value Resource Files and Selectors" />
-    <option name="resource" path="Android" hit="Value Resource Files and Selectors" />
-    <option name="selectors" path="Android" hit="Value Resource Files and Selectors" />
-    <option name="value" path="Android" hit="Value Resource Files and Selectors" />
     <option name="guides" path="Other" hit="Visual guides:" />
     <option name="visual" path="Other" hit="Visual guides:" />
     <option name="around" path="Other" hit="Whitespace around:" />
@@ -2499,8 +2286,6 @@
   <configurable id="project.propVCSSupport.Mappings" configurable_name="Version Control" />
   <configurable id="project.propVCSSupport.Confirmation" configurable_name="Confirmation">
     <option name="add" hit="Add" />
-    <option name="add" hit="Add silently" />
-    <option name="silently" hit="Add silently" />
     <option name="apply" hit="Apply to files created outside IntelliJ IDEA" />
     <option name="created" hit="Apply to files created outside IntelliJ IDEA" />
     <option name="files" hit="Apply to files created outside IntelliJ IDEA" />
@@ -2519,12 +2304,6 @@
     <option name="with" hit="Check for conflicts with the server every" />
     <option name="checkout" hit="Checkout" />
     <option name="confirmation" hit="Confirmation" />
-    <option name="add" hit="Do not add" />
-    <option name="do" hit="Do not add" />
-    <option name="not" hit="Do not add" />
-    <option name="do" hit="Do not remove" />
-    <option name="not" hit="Do not remove" />
-    <option name="remove" hit="Do not remove" />
     <option name="do" hit="Do nothing" />
     <option name="nothing" hit="Do nothing" />
     <option name="edit" hit="Edit" />
@@ -2583,8 +2362,6 @@
     <option name="unlock" hit="Prompt to unlock files set to read-only if you attempt to edit them" />
     <option name="you" hit="Prompt to unlock files set to read-only if you attempt to edit them" />
     <option name="remove" hit="Remove" />
-    <option name="remove" hit="Remove silently" />
-    <option name="silently" hit="Remove silently" />
     <option name="branches" hit="Restore workspace when switching branches" />
     <option name="restore" hit="Restore workspace when switching branches" />
     <option name="switching" hit="Restore workspace when switching branches" />
@@ -2649,14 +2426,8 @@
     <option name="automatically" hit="Create changelists automatically" />
     <option name="changelists" hit="Create changelists automatically" />
     <option name="create" hit="Create changelists automatically" />
-    <option name="do" hit="Do nothing" />
-    <option name="nothing" hit="Do nothing" />
     <option name="changelist" hit="Inactive Changelist" />
     <option name="inactive" hit="Inactive Changelist" />
-    <option name="remove" hit="Remove silently" />
-    <option name="silently" hit="Remove silently" />
-    <option name="options" hit="Show options" />
-    <option name="show" hit="Show options" />
     <option name="an" hit="When an empty changelist becomes inactive:" />
     <option name="becomes" hit="When an empty changelist becomes inactive:" />
     <option name="changelist" hit="When an empty changelist becomes inactive:" />

@@ -28,12 +28,19 @@
     <option name="exclude" path="ActionManager" hit="Exclude from Qodana Analysis…" />
     <option name="from" path="ActionManager" hit="Exclude from Qodana Analysis…" />
     <option name="qodana" path="ActionManager" hit="Exclude from Qodana Analysis…" />
+    <option name="build" path="ActionManager" hit="Open Build Page" />
+    <option name="open" path="ActionManager" hit="Open Build Page" />
+    <option name="page" path="ActionManager" hit="Open Build Page" />
     <option name="editor" path="ActionManager" hit="Open Editor Preview" />
     <option name="open" path="ActionManager" hit="Open Editor Preview" />
     <option name="preview" path="ActionManager" hit="Open Editor Preview" />
     <option name="local" path="ActionManager" hit="Open Local Report…" />
     <option name="open" path="ActionManager" hit="Open Local Report…" />
     <option name="report" path="ActionManager" hit="Open Local Report…" />
+    <option name="browser" path="ActionManager" hit="Open Qodana in Browser" />
+    <option name="in" path="ActionManager" hit="Open Qodana in Browser" />
+    <option name="open" path="ActionManager" hit="Open Qodana in Browser" />
+    <option name="qodana" path="ActionManager" hit="Open Qodana in Browser" />
     <option name="open" path="ActionManager" hit="Open SARIF with Qodana" />
     <option name="qodana" path="ActionManager" hit="Open SARIF with Qodana" />
     <option name="sarif" path="ActionManager" hit="Open SARIF with Qodana" />

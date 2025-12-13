@@ -13,13 +13,6 @@
     <option name="for" path="ActionManager" hit="Check for new timeline events" />
     <option name="new" path="ActionManager" hit="Check for new timeline events" />
     <option name="timeline" path="ActionManager" hit="Check for new timeline events" />
-    <option name="branch" path="ActionManager" hit="Checkout Remote Branch…" />
-    <option name="checkout" path="ActionManager" hit="Checkout Remote Branch…" />
-    <option name="remote" path="ActionManager" hit="Checkout Remote Branch…" />
-    <option name="branch" path="ActionManager" hit="Checkout review request branch" />
-    <option name="checkout" path="ActionManager" hit="Checkout review request branch" />
-    <option name="request" path="ActionManager" hit="Checkout review request branch" />
-    <option name="review" path="ActionManager" hit="Checkout review request branch" />
     <option name="copy" path="ActionManager" hit="Copy Link to GitHub Repository" />
     <option name="github" path="ActionManager" hit="Copy Link to GitHub Repository" />
     <option name="link" path="ActionManager" hit="Copy Link to GitHub Repository" />
@@ -37,11 +30,16 @@
     <option name="create" path="ActionManager" hit="Create Pull Request…" />
     <option name="pull" path="ActionManager" hit="Create Pull Request…" />
     <option name="request" path="ActionManager" hit="Create Pull Request…" />
-    <option name="easily" path="ActionManager" hit="Easily share project on GitHub" />
-    <option name="github" path="ActionManager" hit="Easily share project on GitHub" />
-    <option name="on" path="ActionManager" hit="Easily share project on GitHub" />
-    <option name="project" path="ActionManager" hit="Easily share project on GitHub" />
-    <option name="share" path="ActionManager" hit="Easily share project on GitHub" />
+    <option name="a" path="ActionManager" hit="Create a repository on GitHub and push your commits there" />
+    <option name="and" path="ActionManager" hit="Create a repository on GitHub and push your commits there" />
+    <option name="commits" path="ActionManager" hit="Create a repository on GitHub and push your commits there" />
+    <option name="create" path="ActionManager" hit="Create a repository on GitHub and push your commits there" />
+    <option name="github" path="ActionManager" hit="Create a repository on GitHub and push your commits there" />
+    <option name="on" path="ActionManager" hit="Create a repository on GitHub and push your commits there" />
+    <option name="push" path="ActionManager" hit="Create a repository on GitHub and push your commits there" />
+    <option name="repository" path="ActionManager" hit="Create a repository on GitHub and push your commits there" />
+    <option name="there" path="ActionManager" hit="Create a repository on GitHub and push your commits there" />
+    <option name="your" path="ActionManager" hit="Create a repository on GitHub and push your commits there" />
     <option name="as" path="ActionManager" hit="Mark as Not Viewed" />
     <option name="mark" path="ActionManager" hit="Mark as Not Viewed" />
     <option name="not" path="ActionManager" hit="Mark as Not Viewed" />
@@ -120,8 +118,16 @@
     <option name="repositories" hit="Clone git repositories using ssh" />
     <option name="ssh" hit="Clone git repositories using ssh" />
     <option name="using" hit="Clone git repositories using ssh" />
+    <option name="configure" hit="Configure password store" />
+    <option name="password" hit="Configure password store" />
+    <option name="store" hit="Configure password store" />
     <option name="connection" hit="Connection timeout:" />
     <option name="timeout" hit="Connection timeout:" />
+    <option name="be" hit="Credentials will not be persisted:" />
+    <option name="credentials" hit="Credentials will not be persisted:" />
+    <option name="not" hit="Credentials will not be persisted:" />
+    <option name="persisted" hit="Credentials will not be persisted:" />
+    <option name="will" hit="Credentials will not be persisted:" />
     <option name="github" hit="GitHub" />
     <option name="seconds" hit="seconds" />
   </configurable>

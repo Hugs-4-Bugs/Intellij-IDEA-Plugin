@@ -39,7 +39,6 @@
     <option name="features" hit="Features Trainer" />
     <option name="trainer" hit="Features Trainer" />
     <option name="java" hit="Java" />
-    <option name="javascript" hit="JavaScript" />
     <option name="kotlin" hit="Kotlin" />
     <option name="language" hit="Learning main programming language" />
     <option name="learning" hit="Learning main programming language" />
@@ -55,24 +54,6 @@
     <option name="show" hit="Show notifications on new lessons" />
   </configurable>
   <configurable id="org.intellij.featuresSuggester.FeatureSuggesterConfigurable" configurable_name="Features Suggester">
-    <option name="" hit=" Configure suggestions for actions. It will suggest the following actions in cases where their application can be effective." />
-    <option name="actions" hit=" Configure suggestions for actions. It will suggest the following actions in cases where their application can be effective." />
-    <option name="application" hit=" Configure suggestions for actions. It will suggest the following actions in cases where their application can be effective." />
-    <option name="be" hit=" Configure suggestions for actions. It will suggest the following actions in cases where their application can be effective." />
-    <option name="can" hit=" Configure suggestions for actions. It will suggest the following actions in cases where their application can be effective." />
-    <option name="cases" hit=" Configure suggestions for actions. It will suggest the following actions in cases where their application can be effective." />
-    <option name="configure" hit=" Configure suggestions for actions. It will suggest the following actions in cases where their application can be effective." />
-    <option name="effective" hit=" Configure suggestions for actions. It will suggest the following actions in cases where their application can be effective." />
-    <option name="following" hit=" Configure suggestions for actions. It will suggest the following actions in cases where their application can be effective." />
-    <option name="for" hit=" Configure suggestions for actions. It will suggest the following actions in cases where their application can be effective." />
-    <option name="in" hit=" Configure suggestions for actions. It will suggest the following actions in cases where their application can be effective." />
-    <option name="it" hit=" Configure suggestions for actions. It will suggest the following actions in cases where their application can be effective." />
-    <option name="suggest" hit=" Configure suggestions for actions. It will suggest the following actions in cases where their application can be effective." />
-    <option name="suggestions" hit=" Configure suggestions for actions. It will suggest the following actions in cases where their application can be effective." />
-    <option name="the" hit=" Configure suggestions for actions. It will suggest the following actions in cases where their application can be effective." />
-    <option name="their" hit=" Configure suggestions for actions. It will suggest the following actions in cases where their application can be effective." />
-    <option name="where" hit=" Configure suggestions for actions. It will suggest the following actions in cases where their application can be effective." />
-    <option name="will" hit=" Configure suggestions for actions. It will suggest the following actions in cases where their application can be effective." />
     <option name="a" hit="Choose a lookup item and replace" />
     <option name="and" hit="Choose a lookup item and replace" />
     <option name="choose" hit="Choose a lookup item and replace" />

@@ -8,31 +8,43 @@
     <option name="prabhatai" path="ActionManager" hit="Apply PrabhatAI Patch" />
     <option name="prabhatai" path="ActionManager" hit="Run PrabhatAI" />
     <option name="run" path="ActionManager" hit="Run PrabhatAI" />
-    <option name="code" path="ActionManager" hit="Run PrabhatAI on selected code or text" />
-    <option name="on" path="ActionManager" hit="Run PrabhatAI on selected code or text" />
-    <option name="or" path="ActionManager" hit="Run PrabhatAI on selected code or text" />
-    <option name="prabhatai" path="ActionManager" hit="Run PrabhatAI on selected code or text" />
-    <option name="run" path="ActionManager" hit="Run PrabhatAI on selected code or text" />
-    <option name="selected" path="ActionManager" hit="Run PrabhatAI on selected code or text" />
-    <option name="text" path="ActionManager" hit="Run PrabhatAI on selected code or text" />
+    <option name="code" path="ActionManager" hit="Run PrabhatAI on selected code or instruction" />
+    <option name="instruction" path="ActionManager" hit="Run PrabhatAI on selected code or instruction" />
+    <option name="on" path="ActionManager" hit="Run PrabhatAI on selected code or instruction" />
+    <option name="or" path="ActionManager" hit="Run PrabhatAI on selected code or instruction" />
+    <option name="prabhatai" path="ActionManager" hit="Run PrabhatAI on selected code or instruction" />
+    <option name="run" path="ActionManager" hit="Run PrabhatAI on selected code or instruction" />
+    <option name="selected" path="ActionManager" hit="Run PrabhatAI on selected code or instruction" />
   </configurable>
-  <configurable id="com.PrabhatDevLab.settings.PrabhatAISettingsConfigurable" configurable_name="PrabhatAI">
-    <option name="enable" hit="Enable Gemini" />
-    <option name="gemini" hit="Enable Gemini" />
-    <option name="enable" hit="Enable Mock Provider" />
-    <option name="mock" hit="Enable Mock Provider" />
-    <option name="provider" hit="Enable Mock Provider" />
-    <option name="enable" hit="Enable OpenAI" />
-    <option name="openai" hit="Enable OpenAI" />
+  <configurable id="PrabhatAI.Settings" configurable_name="PrabhatAI">
+    <option name="" hit="  Move Down" />
+    <option name="down" hit="  Move Down" />
+    <option name="move" hit="  Move Down" />
+    <option name="" hit="  Move Up" />
+    <option name="move" hit="  Move Up" />
+    <option name="up" hit="  Move Up" />
+    <option name="ai" hit="Claude AI" />
+    <option name="claude" hit="Claude AI" />
+    <option name="api" hit="Claude API Key:" />
+    <option name="claude" hit="Claude API Key:" />
+    <option name="key" hit="Claude API Key:" />
+    <option name="enable" hit="Enable Providers:" />
+    <option name="providers" hit="Enable Providers:" />
     <option name="api" hit="Gemini API Key:" />
     <option name="gemini" hit="Gemini API Key:" />
     <option name="key" hit="Gemini API Key:" />
-    <option name="key" hit="OpenAI Key:" />
-    <option name="openai" hit="OpenAI Key:" />
+    <option name="gemini" hit="Google Gemini" />
+    <option name="google" hit="Google Gemini" />
+    <option name="mock" hit="Mock Provider" />
+    <option name="provider" hit="Mock Provider" />
+    <option name="openai" hit="OpenAI" />
+    <option name="api" hit="OpenAI API Key:" />
+    <option name="key" hit="OpenAI API Key:" />
+    <option name="openai" hit="OpenAI API Key:" />
     <option name="prabhatai" hit="PrabhatAI" />
-    <option name="comma" hit="Provider Order (comma separated):" />
-    <option name="order" hit="Provider Order (comma separated):" />
-    <option name="provider" hit="Provider Order (comma separated):" />
-    <option name="separated" hit="Provider Order (comma separated):" />
+    <option name="highest" hit="Provider Priority (Top = Highest)" />
+    <option name="priority" hit="Provider Priority (Top = Highest)" />
+    <option name="provider" hit="Provider Priority (Top = Highest)" />
+    <option name="top" hit="Provider Priority (Top = Highest)" />
   </configurable>
 </options>
