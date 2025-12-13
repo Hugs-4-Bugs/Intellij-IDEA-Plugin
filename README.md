@@ -389,6 +389,9 @@ Enable Mock provider to avoid total failure.
 
 ---
 
+<img width="1440" height="900" alt="Screenshot 2025-12-13 at 9 54 54 PM" src="https://github.com/user-attachments/assets/bd72e3f8-b74c-4352-a796-909dbd7803b0" />
+
+---
 
 # ✅ **PrabhatAI Plugin — Architecture Diagram (Mermaid)**
 
@@ -939,6 +942,7 @@ You can contribute:
 # 🏁 **License**
 
 MIT License (recommend adding this).
+
 
 
 
