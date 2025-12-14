@@ -1,0 +1,124 @@
+.
+├── .DS_Store
+├── .gitignore
+├── .gradle
+│   ├── 8.4
+│   │   ├── checksums
+│   │   │   ├── checksums.lock
+│   │   │   ├── md5-checksums.bin
+│   │   │   └── sha1-checksums.bin
+│   │   ├── dependencies-accessors
+│   │   │   ├── dependencies-accessors.lock
+│   │   │   └── gc.properties
+│   │   ├── executionHistory
+│   │   │   ├── executionHistory.bin
+│   │   │   └── executionHistory.lock
+│   │   ├── fileChanges
+│   │   │   └── last-build.bin
+│   │   ├── fileHashes
+│   │   │   ├── fileHashes.bin
+│   │   │   ├── fileHashes.lock
+│   │   │   └── resourceHashesCache.bin
+│   │   ├── gc.properties
+│   │   └── vcsMetadata
+│   ├── buildOutputCleanup
+│   │   ├── buildOutputCleanup.lock
+│   │   ├── cache.properties
+│   │   └── outputFiles.bin
+│   ├── file-system.probe
+│   └── vcs-1
+│       └── gc.properties
+├── .idea
+│   ├── compiler.xml
+│   ├── easycode
+│   │   └── codebase-v2.xml
+│   ├── easycode.ignore
+│   ├── gradle.xml
+│   ├── jarRepositories.xml
+│   ├── misc.xml
+│   ├── uiDesigner.xml
+│   ├── vcs.xml
+│   └── workspace.xml
+├── README.md
+├── build.gradle
+├── gradle
+│   └── wrapper
+│       ├── gradle-wrapper.jar
+│       └── gradle-wrapper.properties
+├── gradlew
+├── gradlew.bat
+├── settings.gradle
+├── src
+│   ├── main
+│   │   ├── java
+│   │   │   └── com
+│   │   │       └── PrabhatDevLab
+│   │   │           ├── PrabhatAI.java
+│   │   │           ├── actions
+│   │   │           │   ├── ApplyPatchAction.java
+│   │   │           │   └── ShowAiPanelAction.java
+│   │   │           ├── listeners
+│   │   │           │   └── PrabhatAIEditorListener.java
+│   │   │           ├── services
+│   │   │           │   ├── AiFacadeService.java
+│   │   │           │   ├── ContextExtractor.java
+│   │   │           │   ├── MultiFilePatchApplier.java
+│   │   │           │   ├── PromptTemplateManager.java
+│   │   │           │   ├── PsiPatchApplier.java
+│   │   │           │   ├── ai
+│   │   │           │   │   ├── AIProvider.java
+│   │   │           │   │   ├── ClaudeAdapter.java
+│   │   │           │   │   ├── GeminiAdapter.java
+│   │   │           │   │   ├── MockAIProvider.java
+│   │   │           │   │   ├── OpenAIAdapter.java
+│   │   │           │   │   ├── ProviderManager.java
+│   │   │           │   │   ├── QuotaGuard.java
+│   │   │           │   │   └── StreamCallback.java
+│   │   │           │   ├── context
+│   │   │           │   │   ├── ActiveFileContextExtractor.java
+│   │   │           │   │   └── ProjectContextExtractor.java
+│   │   │           │   ├── models
+│   │   │           │   │   ├── AiResponse.java
+│   │   │           │   │   ├── MultiFilePatchModel.java
+│   │   │           │   │   ├── PatchModel.java
+│   │   │           │   │   └── PromptRequest.java
+│   │   │           │   ├── patch
+│   │   │           │   │   └── PsiPatchApplier.java
+│   │   │           │   └── tests
+│   │   │           │       ├── JUnitTestGenerator.java
+│   │   │           │       └── TestFileCreator.java
+│   │   │           ├── settings
+│   │   │           │   ├── PrabhatAISettingsConfigurable.java
+│   │   │           │   └── PrabhatAISettingsState.java
+│   │   │           ├── ui
+│   │   │           │   ├── AiToolWindowFactory.java
+│   │   │           │   ├── ChatPanel.java
+│   │   │           │   ├── DiffPreviewPanel.java
+│   │   │           │   ├── InlineSuggestionRenderer.java
+│   │   │           │   ├── MarkdownRenderer.java
+│   │   │           │   └── chat
+│   │   │           │       └── PrabhatAIChatPanel.java
+│   │   │           └── util
+│   │   │               └── HttpClientUtil.java
+│   │   └── resources
+│   │       ├── META-INF
+│   │       │   └── plugin.xml
+│   │       └── templates
+│   │           └── prompt-templates.json 
+│   └── test
+│       ├── java
+│       └── resources
+└── structure.txt
+
+38 directories, 73 files
+
+
+
+
+
+
+
+
+
+
+// command to generate this file with project structure:   tree -a -I ".git|build|out" > structure.txt

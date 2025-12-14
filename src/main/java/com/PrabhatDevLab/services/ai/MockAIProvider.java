@@ -43,6 +43,30 @@
 
 
 
+//
+//package com.PrabhatDevLab.services.ai;
+//
+//import com.PrabhatDevLab.services.models.AiResponse;
+//import com.PrabhatDevLab.services.models.PromptRequest;
+//
+//import java.util.concurrent.CompletableFuture;
+//
+//public class MockAIProvider implements AIProvider {
+//
+//    @Override
+//    public CompletableFuture<AiResponse> completeCode(PromptRequest req) {
+//        return CompletableFuture.completedFuture(
+//                new AiResponse("Mock response: " + req.getPrompt())
+//        );
+//    }
+//
+//    @Override
+//    public String providerId() {
+//        return "mock";
+//    }
+//}
+
+
 
 package com.PrabhatDevLab.services.ai;
 
@@ -54,15 +78,49 @@ import java.util.concurrent.CompletableFuture;
 public class MockAIProvider implements AIProvider {
 
     @Override
-    public CompletableFuture<AiResponse> completeCode(PromptRequest req) {
-        return CompletableFuture.completedFuture(
-                new AiResponse("Mock response: " + req.getPrompt())
-        );
-    }
-
-    @Override
     public String providerId() {
         return "mock";
     }
-}
 
+    @Override
+    public CompletableFuture<AiResponse> completeCode(PromptRequest req) {
+        return CompletableFuture.supplyAsync(() -> {
+            try {
+                // Simulate network delay
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
+
+            AiResponse response = new AiResponse();
+
+            String mockResponse = String.format("""
+            # Mock AI Response
+            
+            You asked: **%s**
+            
+            This is a **mock response** from PrabhatAI. 
+            
+            ## Features:
+            - ✅ Code generation
+            - ✅ Bug detection
+            - ✅ Documentation
+            - ✅ Refactoring suggestions
+            
+            ### Example Code:
+```java
+            public class Example {
+                public static void main(String[] args) {
+                    System.out.println("Hello from PrabhatAI!");
+                }
+            }
+```
+            
+            To use real AI, configure your API keys in **Settings > PrabhatAI**.
+            """, req.getPrompt());
+
+            response.setExplanation(mockResponse);
+            return response;
+        });
+    }
+}

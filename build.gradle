@@ -13,6 +13,11 @@ repositories {
 dependencies {
     implementation 'com.squareup.okhttp3:okhttp:4.11.0'
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
+    // Markdown library
+    implementation 'org.jetbrains:markdown:0.4.0'
+
+    // Kotlin stdlib (required by markdown library)
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.9.22'
 }
 
 java {

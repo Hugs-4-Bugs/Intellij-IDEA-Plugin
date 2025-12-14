@@ -241,79 +241,212 @@
 
 
 
+//package com.PrabhatDevLab.services.ai;
+//
+//import com.PrabhatDevLab.services.models.AiResponse;
+//import com.PrabhatDevLab.services.models.PromptRequest;
+//
+//import com.fasterxml.jackson.databind.JsonNode;
+//import com.fasterxml.jackson.databind.ObjectMapper;
+//
+//import okhttp3.*;
+//
+//import java.util.List;
+//import java.util.Map;
+//import java.util.concurrent.CompletableFuture;
+//
+//public class OpenAIAdapter implements AIProvider {
+//
+//    private String apiKey;
+//    private final OkHttpClient client = new OkHttpClient();
+//    private final ObjectMapper mapper = new ObjectMapper();
+//
+//    @Override
+//    public void setApiKey(String key) { this.apiKey = key; }
+//
+//    @Override
+//    public CompletableFuture<AiResponse> completeCode(PromptRequest req) {
+//
+//        return CompletableFuture.supplyAsync(() -> {
+//            try {
+//                if (apiKey == null || apiKey.isBlank())
+//                    throw new RuntimeException("OpenAI key missing");
+//
+//                Map<String, Object> json = Map.of(
+//                        "model", "gpt-4o-mini",
+//                        "messages", List.of(
+//                                Map.of("role", "user", "content", req.getPrompt())
+//                        )
+//                );
+//
+//                Request request = new Request.Builder()
+//                        .url("https://api.openai.com/v1/chat/completions")
+//                        .addHeader("Authorization", "Bearer " + apiKey)
+//                        .post(RequestBody.create(
+//                                mapper.writeValueAsString(json),
+//                                MediaType.get("application/json")
+//                        ))
+//                        .build();
+//
+//                Response response = client.newCall(request).execute();
+//                if (!response.isSuccessful())
+//                    throw new RuntimeException("OpenAI HTTP " + response.code());
+//
+//                return parse(response.body().string());
+//
+//            } catch (Exception ex) {
+//                throw new RuntimeException("OpenAI failed: " + ex.getMessage(), ex);
+//            }
+//        });
+//    }
+//
+//    private AiResponse parse(String raw) throws Exception {
+//
+//        JsonNode contentNode = mapper.readTree(raw)
+//                .path("choices").get(0)
+//                .path("message")
+//                .path("content");
+//
+//        String text = contentNode.isArray()
+//                ? contentNode.get(0).asText()
+//                : contentNode.asText();
+//
+//        return new AiResponse(text);
+//    }
+//
+//    @Override
+//    public String providerId() { return "openai"; }
+//}
+
+
+
+
+
 package com.PrabhatDevLab.services.ai;
 
 import com.PrabhatDevLab.services.models.AiResponse;
 import com.PrabhatDevLab.services.models.PromptRequest;
-
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-
 import okhttp3.*;
 
-import java.util.List;
-import java.util.Map;
+import java.io.IOException;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.TimeUnit;
 
 public class OpenAIAdapter implements AIProvider {
 
-    private String apiKey;
-    private final OkHttpClient client = new OkHttpClient();
+    private String apiKey = "";
+    private static final String API_URL = "https://api.openai.com/v1/chat/completions";
+
+    private final OkHttpClient client = new OkHttpClient.Builder()
+            .connectTimeout(30, TimeUnit.SECONDS)
+            .readTimeout(60, TimeUnit.SECONDS)
+            .writeTimeout(30, TimeUnit.SECONDS)
+            .build();
+
     private final ObjectMapper mapper = new ObjectMapper();
 
+    public void setApiKey(String key) {
+        this.apiKey = key;
+    }
+
     @Override
-    public void setApiKey(String key) { this.apiKey = key; }
+    public String providerId() {
+        return "openai";
+    }
 
     @Override
     public CompletableFuture<AiResponse> completeCode(PromptRequest req) {
+        CompletableFuture<AiResponse> future = new CompletableFuture<>();
 
-        return CompletableFuture.supplyAsync(() -> {
-            try {
-                if (apiKey == null || apiKey.isBlank())
-                    throw new RuntimeException("OpenAI key missing");
+        if (apiKey == null || apiKey.trim().isEmpty()) {
+            future.completeExceptionally(new RuntimeException("OpenAI API key not configured"));
+            return future;
+        }
 
-                Map<String, Object> json = Map.of(
-                        "model", "gpt-4o-mini",
-                        "messages", List.of(
-                                Map.of("role", "user", "content", req.getPrompt())
-                        )
-                );
-
-                Request request = new Request.Builder()
-                        .url("https://api.openai.com/v1/chat/completions")
-                        .addHeader("Authorization", "Bearer " + apiKey)
-                        .post(RequestBody.create(
-                                mapper.writeValueAsString(json),
-                                MediaType.get("application/json")
-                        ))
-                        .build();
-
-                Response response = client.newCall(request).execute();
-                if (!response.isSuccessful())
-                    throw new RuntimeException("OpenAI HTTP " + response.code());
-
-                return parse(response.body().string());
-
-            } catch (Exception ex) {
-                throw new RuntimeException("OpenAI failed: " + ex.getMessage(), ex);
+        try {
+            String requestBody = String.format("""
+            {
+              "model": "gpt-3.5-turbo",
+              "messages": [{
+                "role": "user",
+                "content": "%s"
+              }],
+              "temperature": 0.7,
+              "max_tokens": 2048
             }
-        });
+            """, escapeJson(req.getPrompt()));
+
+            Request request = new Request.Builder()
+                    .url(API_URL)
+                    .post(RequestBody.create(requestBody, MediaType.parse("application/json")))
+                    .addHeader("Content-Type", "application/json")
+                    .addHeader("Authorization", "Bearer " + apiKey)
+                    .build();
+
+            System.out.println("[OpenAI] Sending request...");
+
+            client.newCall(request).enqueue(new Callback() {
+                @Override
+                public void onFailure(Call call, IOException e) {
+                    System.err.println("[OpenAI] Request failed: " + e.getMessage());
+                    future.completeExceptionally(
+                            new RuntimeException("OpenAI failed: " + e.getMessage())
+                    );
+                }
+
+                @Override
+                public void onResponse(Call call, Response response) throws IOException {
+                    try {
+                        String body = response.body().string();
+                        System.out.println("[OpenAI] Response received: " + response.code());
+
+                        if (!response.isSuccessful()) {
+                            future.completeExceptionally(
+                                    new RuntimeException("OpenAI HTTP " + response.code() + ": " + body)
+                            );
+                            return;
+                        }
+
+                        JsonNode root = mapper.readTree(body);
+                        String text = root.path("choices")
+                                .get(0)
+                                .path("message")
+                                .path("content")
+                                .asText();
+
+                        AiResponse aiResponse = new AiResponse();
+                        aiResponse.setExplanation(text);
+
+                        System.out.println("[OpenAI] Success!");
+                        future.complete(aiResponse);
+
+                    } catch (Exception e) {
+                        System.err.println("[OpenAI] Parse error: " + e.getMessage());
+                        future.completeExceptionally(
+                                new RuntimeException("OpenAI parse error: " + e.getMessage())
+                        );
+                    }
+                }
+            });
+
+        } catch (Exception e) {
+            System.err.println("[OpenAI] Setup error: " + e.getMessage());
+            future.completeExceptionally(
+                    new RuntimeException("OpenAI setup error: " + e.getMessage())
+            );
+        }
+
+        return future;
     }
 
-    private AiResponse parse(String raw) throws Exception {
-
-        JsonNode contentNode = mapper.readTree(raw)
-                .path("choices").get(0)
-                .path("message")
-                .path("content");
-
-        String text = contentNode.isArray()
-                ? contentNode.get(0).asText()
-                : contentNode.asText();
-
-        return new AiResponse(text);
+    private String escapeJson(String s) {
+        if (s == null) return "";
+        return s.replace("\\", "\\\\")
+                .replace("\"", "\\\"")
+                .replace("\n", "\\n")
+                .replace("\r", "\\r")
+                .replace("\t", "\\t");
     }
-
-    @Override
-    public String providerId() { return "openai"; }
 }
